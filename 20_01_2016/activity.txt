@@ -1,0 +1,4 @@
+Familiarised with git
+Installed JDK8
+Installed AndroidStudio and SDK
+
