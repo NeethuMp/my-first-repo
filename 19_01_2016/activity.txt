@@ -1,0 +1,6 @@
+installed ubuntu
+installed git
+familiarised with nano
+created my github account
+created my first git repo
+
