@@ -1,0 +1,2 @@
+Familiarised with Retrofit
+Worked out example of retrofit
