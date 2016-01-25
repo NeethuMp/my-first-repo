@@ -1,0 +1,6 @@
+worked out an example of repo name and url 
+worked out how to fetch avatar photo from github
+worked out how to use listview
+worked out how to use custom adapter
+worked out how to fetch image using Glide and Picasso
+worked out an example using viewholder
