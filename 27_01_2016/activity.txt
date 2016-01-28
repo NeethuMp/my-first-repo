@@ -1,0 +1,4 @@
+Familiarised with Recyclerview.
+Worked out an Example of RecyclerView
+worked out on item click event of recyclerview
+Familiarised with Asynctask

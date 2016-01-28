@@ -1,0 +1,4 @@
+Familiarised with AsyncTask
+Worked out an Example of AyncTask which Used progress Dialog
+Worked out an example of AsyncTask using Indeterminate ProgressBar
+Familiarised with Service in android
