@@ -1,0 +1,3 @@
+Familiarised with SQlite database
+Worked out an example of how to store and fetch data from database
+
