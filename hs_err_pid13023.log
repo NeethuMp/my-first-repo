@@ -1,0 +1,1430 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007f3521f68eba, pid=13023, tid=139865310951168
+#
+# JRE version: Java(TM) SE Runtime Environment (8.0_71-b15) (build 1.8.0_71-b15)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.71-b15 mixed mode linux-amd64 compressed oops)
+# Problematic frame:
+# v  ~BufferBlob::jni_fast_GetLongField
+#
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007f35308d5800):  JavaThread "AWT-XAWT" daemon [_thread_in_native, id=13063, stack(0x00007f34ee1cf000,0x00007f34ee2d0000)]
+
+siginfo: si_signo: 11 (SIGSEGV), si_code: 1 (SEGV_MAPERR), si_addr: 0x0000000000000000
+
+Registers:
+RAX=0x00007f3537418f60, RBX=0x00007f35308d59f8, RCX=0x00007f3537e7b320, RDX=0x0000000000000042
+RSP=0x00007f34ee2ce6f8, RBP=0x00007f34ee2ce720, RSI=0x0000000000000000, RDI=0x00007f35308d59f8
+R8 =0x00000000be34d7b0, R9 =0x0000000000000000, R10=0x0000000000000c26, R11=0x00007f3523986d58
+R12=0x00007f34f6da99d0, R13=0x0000000000000000, R14=0x00007f351833b7e0, R15=0x00007f35308d5800
+RIP=0x00007f3521f68eba, EFLAGS=0x0000000000010246, CSGSFS=0x0000000000000033, ERR=0x0000000000000004
+  TRAPNO=0x000000000000000e
+
+Top of Stack: (sp=0x00007f34ee2ce6f8)
+0x00007f34ee2ce6f8:   00007f3518119ef1 00007f34eec90450
+0x00007f34ee2ce708:   00007f34f6da99d0 00007f34ee2ce7d0
+0x00007f34ee2ce718:   00007f34ee2ce7a0 0000000000000000
+0x00007f34ee2ce728:   00007f34efb1aae8 00007f34eec90450
+0x00007f34ee2ce738:   00007f34ee2ce760 0000000000000000
+0x00007f34ee2ce748:   00007f34efb129a3 00007f34ee2ce7d0
+0x00007f34ee2ce758:   00007f351811312f 00007f34ee2ce7b0
+0x00007f34ee2ce768:   00007f3523986df6 0000000000000000
+0x00007f34ee2ce778:   00007f35223cf6b6 00007f34ee2ce7d0
+0x00007f34ee2ce788:   00007f35220aa4ac 00007f34ee2ce830
+0x00007f34ee2ce798:   00000000bdb87b28 00000000bddbb208
+0x00007f34ee2ce7a8:   0000000000000009 00007f34ee2ce830
+0x00007f34ee2ce7b8:   00007f3521f07160 00007f34ee2ce830
+0x00007f34ee2ce7c8:   00007f3521f07160 0000000000000000
+0x00007f34ee2ce7d8:   00007f3521f074a0 00007f34dc000e30
+0x00007f34ee2ce7e8:   00000000bdcabf40 00007f34ee2ce7f0
+0x00007f34ee2ce7f8:   00007f34eec70654 00007f34ee2ce878
+0x00007f34ee2ce808:   00007f34eec79578 0000000000000000
+0x00007f34ee2ce818:   00007f34eec70790 00007f34ee2ce7d0
+0x00007f34ee2ce828:   00007f34ee2ce870 00007f34ee2ce8c0
+0x00007f34ee2ce838:   00007f3521f0798d 0000000000000000
+0x00007f34ee2ce848:   00000000b3a9c010 0000000000000000
+0x00007f34ee2ce858:   0000000000000000 0000000000000000
+0x00007f34ee2ce868:   00000000bdcabf40 0000000000000000
+0x00007f34ee2ce878:   00000000bc953f48 00007f34ee2ce880
+0x00007f34ee2ce888:   00007f34eec70495 00007f34ee2ce8d0
+0x00007f34ee2ce898:   00007f34eec79578 0000000000000000
+0x00007f34ee2ce8a8:   00007f34eec704a0 00007f34ee2ce870
+0x00007f34ee2ce8b8:   00007f34ee2ce8d0 00007f34ee2ce918
+0x00007f34ee2ce8c8:   00007f3521f079d2 00000000bc953f48
+0x00007f34ee2ce8d8:   00007f34ee2ce8d8 00007f35205c69cb
+0x00007f34ee2ce8e8:   00007f34ee2ce928 00007f352064de18 
+
+Instructions: (pc=0x00007f3521f68eba)
+0x00007f3521f68e9a:   00 00 00 00 00 00 44 8b 15 61 f6 4e 15 4c 8b ce
+0x00007f3521f68eaa:   41 f6 c2 01 0f 85 2e 00 00 00 4d 33 ca 4d 33 ca
+0x00007f3521f68eba:   4d 8b 09 4c 8b da 49 c1 eb 02 4b 8b 04 19 49 bb
+0x00007f3521f68eca:   08 85 45 37 35 7f 00 00 4c 33 d8 4c 33 d8 45 3b 
+
+Register to memory mapping:
+
+RAX=0x00007f3537418f60: <offset 0xf75f60> in /home/neethu/Intern/Tools/jdk1.8.0_71/jre/lib/amd64/server/libjvm.so at 0x00007f35364a3000
+RBX=0x00007f35308d59f8 is an unknown value
+RCX=0x00007f3537e7b320: <offset 0x219320> in /lib/x86_64-linux-gnu/libpthread.so.0 at 0x00007f3537c62000
+RDX=0x0000000000000042 is an unknown value
+RSP=0x00007f34ee2ce6f8 is pointing into the stack for thread: 0x00007f35308d5800
+RBP=0x00007f34ee2ce720 is pointing into the stack for thread: 0x00007f35308d5800
+RSI=0x0000000000000000 is an unknown value
+RDI=0x00007f35308d59f8 is an unknown value
+R8 =0x00000000be34d7b0 is an oop
+java.util.logging.Logger 
+ - klass: 'java/util/logging/Logger'
+R9 =0x0000000000000000 is an unknown value
+R10=0x0000000000000c26 is an unknown value
+R11=0x00007f3523986d58 is at entry_point+24 in (nmethod*)0x00007f3523986bd0
+R12=0x00007f34f6da99d0 is an unknown value
+R13=0x0000000000000000 is an unknown value
+R14=0x00007f351833b7e0: <offset 0x2587e0> in /home/neethu/Intern/Tools/jdk1.8.0_71/jre/lib/amd64/libawt_xawt.so at 0x00007f35180e3000
+R15=0x00007f35308d5800 is a thread
+
+
+Stack: [0x00007f34ee1cf000,0x00007f34ee2d0000],  sp=0x00007f34ee2ce6f8,  free space=1021k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+v  ~BufferBlob::jni_fast_GetLongField
+C  [libX11.so.6+0x61ae8]  _XimServerDestroy+0x58
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+J 12368  sun.awt.X11.XlibWrapper.XFilterEvent(JJ)Z (0 bytes) @ 0x00007f3523986d84 [0x00007f3523986d40+0x44]
+j  sun.awt.X11.XToolkit.run(Z)V+300
+j  sun.awt.X11.XToolkit.run()V+5
+j  java.lang.Thread.run()V+11
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x00007f34e82a7800 JavaThread "XToolkt-Shutdown-Thread" [_thread_blocked, id=13287, stack(0x00007f34ccd4a000,0x00007f34cce4b000)]
+  0x00007f34e82a5800 JavaThread "Shutdown tracker" [_thread_blocked, id=13286, stack(0x00007f34cce4b000,0x00007f34ccf4c000)]
+  0x00007f34f8007800 JavaThread "SIGTERM handler" daemon [_thread_blocked, id=13280, stack(0x00007f34cef50000,0x00007f34cf051000)]
+  0x00007f350c462000 JavaThread "JobScheduler FJ pool 0/2" daemon [_thread_blocked, id=13266, stack(0x00007f34cec4f000,0x00007f34ced50000)]
+  0x00007f34f75d2000 JavaThread "timed reference disposer" daemon [_thread_blocked, id=13248, stack(0x00007f34d1958000,0x00007f34d1a59000)]
+  0x00007f34f6fcc800 JavaThread "ApplicationImpl pooled thread 11" [_thread_blocked, id=13206, stack(0x00007f34cfa51000,0x00007f34cfb52000)]
+  0x00007f350c013800 JavaThread "Change List Updater" daemon [_thread_blocked, id=13205, stack(0x00007f34cfd52000,0x00007f34cfe53000)]
+  0x00007f351c02f000 JavaThread "ApplicationImpl pooled thread 10" [_thread_blocked, id=13203, stack(0x00007f34cfe53000,0x00007f34cff54000)]
+  0x00007f350c666800 JavaThread "ApplicationImpl pooled thread 9" [_thread_blocked, id=13200, stack(0x00007f34d0154000,0x00007f34d0255000)]
+  0x00007f34f6e42000 JavaThread "ApplicationImpl pooled thread 8" [_thread_blocked, id=13198, stack(0x00007f34d0855000,0x00007f34d0956000)]
+  0x00007f3530a74000 JavaThread "ApplicationImpl pooled thread 7" [_thread_blocked, id=13197, stack(0x00007f34d0956000,0x00007f34d0a57000)]
+  0x00007f350c260000 JavaThread "ApplicationImpl pooled thread 6" [_thread_blocked, id=13196, stack(0x00007f34d0a57000,0x00007f34d0b58000)]
+  0x00007f350c2ad000 JavaThread "Document commit thread" daemon [_thread_blocked, id=13194, stack(0x00007f34d1c59000,0x00007f34d1d5a000)]
+  0x00007f34f6dd8000 JavaThread "ApplicationImpl pooled thread 5" [_thread_blocked, id=13166, stack(0x00007f34d23f1000,0x00007f34d24f2000)]
+  0x00007f34f6c8a000 JavaThread "TimerQueue" daemon [_thread_blocked, id=13163, stack(0x00007f34d2e40000,0x00007f34d2f41000)]
+  0x00007f34f6c82000 JavaThread "Animations" daemon [_thread_blocked, id=13162, stack(0x00007f34d2f41000,0x00007f34d3042000)]
+  0x00007f3500002000 JavaThread "Alarm pool(shared)" daemon [_thread_blocked, id=13161, stack(0x00007f34d3042000,0x00007f34d3143000)]
+  0x00007f34f4dd2000 JavaThread "FocusManager timer" daemon [_thread_blocked, id=13131, stack(0x00007f34d3d5e000,0x00007f34d3e5f000)]
+  0x00007f34f4dce800 JavaThread "Shared SimpleTimer" daemon [_thread_blocked, id=13130, stack(0x00007f34d3e5f000,0x00007f34d3f60000)]
+  0x00007f3530a6b800 JavaThread "Netty Builtin Server 2" [_thread_in_native, id=13129, stack(0x00007f34d3f60000,0x00007f34d4061000)]
+  0x00007f34f4d63800 JavaThread "FS Synchronizer" daemon [_thread_blocked, id=13128, stack(0x00007f34d4261000,0x00007f34d4362000)]
+  0x00007f34f4d60000 JavaThread "process reaper" daemon [_thread_blocked, id=13127, stack(0x00007f34d6b1b000,0x00007f34d6b54000)]
+  0x00007f34f4d0b800 JavaThread "Performance watcher" [_thread_blocked, id=13119, stack(0x00007f34d47a9000,0x00007f34d48aa000)]
+  0x00007f34f4d0a000 JavaThread "ApplicationImpl pooled thread 4" [_thread_blocked, id=13118, stack(0x00007f34d48aa000,0x00007f34d49ab000)]
+  0x00007f34f49aa000 JavaThread "ApplicationImpl pooled thread 3" [_thread_in_native, id=13117, stack(0x00007f34d4dab000,0x00007f34d4eac000)]
+  0x00007f34f49a8000 JavaThread "ApplicationImpl pooled thread 2" [_thread_in_native, id=13116, stack(0x00007f34d4eac000,0x00007f34d4fad000)]
+  0x00007f34f49a5800 JavaThread "ApplicationImpl pooled thread 1" [_thread_blocked, id=13115, stack(0x00007f34d4fad000,0x00007f34d50ae000)]
+  0x00007f34f4912800 JavaThread "Flushing thread" daemon [_thread_blocked, id=13113, stack(0x00007f34d50ae000,0x00007f34d51af000)]
+  0x00007f34f41bd000 JavaThread "Periodic tasks thread" daemon [_thread_blocked, id=13097, stack(0x00007f34e0056000,0x00007f34e0157000)]
+  0x00007f34f4188000 JavaThread "AWT-EventQueue-0 Studio 2.0#AI-143.2563049 Studio, eap:true, os:Linux 3.19.0-43-generic, java-version:Oracle Corporation 1.8.0_71-b15" [_thread_blocked, id=13094, stack(0x00007f34d68c7000,0x00007f34d69c8000)]
+  0x00007f34f419e800 JavaThread "AWT-Shutdown" [_thread_blocked, id=13092, stack(0x00007f34d69c8000,0x00007f34d6ac9000)]
+  0x00007f34f411c000 JavaThread "Netty Builtin Server 1" [_thread_in_native, id=13089, stack(0x00007f34d752f000,0x00007f34d7630000)]
+  0x00007f34f4080800 JavaThread "process reaper" daemon [_thread_in_native, id=13085, stack(0x00007f34e001d000,0x00007f34e0056000)]
+  0x00007f353000b000 JavaThread "DestroyJavaVM" [_thread_blocked, id=13025, stack(0x00007f3537f84000,0x00007f3538085000)]
+=>0x00007f35308d5800 JavaThread "AWT-XAWT" daemon [_thread_in_native, id=13063, stack(0x00007f34ee1cf000,0x00007f34ee2d0000)]
+  0x00007f35308bd000 JavaThread "Java2D Disposer" daemon [_thread_blocked, id=13062, stack(0x00007f34ee6e0000,0x00007f34ee7e1000)]
+  0x00007f3530119800 JavaThread "Service Thread" daemon [_thread_blocked, id=13036, stack(0x00007f3519419000,0x00007f351951a000)]
+  0x00007f3530116000 JavaThread "C1 CompilerThread1" daemon [_thread_blocked, id=13035, stack(0x00007f351951a000,0x00007f351961b000)]
+  0x00007f3530114000 JavaThread "C2 CompilerThread0" daemon [_thread_in_native, id=13034, stack(0x00007f351961b000,0x00007f351971c000)]
+  0x00007f3530112000 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=13033, stack(0x00007f351971c000,0x00007f351981d000)]
+  0x00007f3530110800 JavaThread "Surrogate Locker Thread (Concurrent GC)" daemon [_thread_blocked, id=13032, stack(0x00007f351981d000,0x00007f351991e000)]
+  0x00007f35300d8800 JavaThread "Finalizer" daemon [_thread_blocked, id=13031, stack(0x00007f35200be000,0x00007f35201bf000)]
+  0x00007f35300d6800 JavaThread "Reference Handler" daemon [_thread_blocked, id=13030, stack(0x00007f35201bf000,0x00007f35202c0000)]
+
+Other Threads:
+  0x00007f35300d1800 VMThread [stack: 0x00007f35202c0000,0x00007f35203c1000] [id=13029]
+  0x00007f353011c800 WatcherThread [stack: 0x00007f3519318000,0x00007f3519419000] [id=13037]
+
+VM state:synchronizing (normal execution)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x00007f3530007310] Safepoint_lock - owner thread: 0x00007f35300d1800
+[0x00007f3530007390] Threads_lock - owner thread: 0x00007f35300d1800
+
+Heap:
+ par new generation   total 153344K, used 126366K [0x00000000b0000000, 0x00000000ba660000, 0x00000000ba660000)
+  eden space 136320K,  80% used [0x00000000b0000000, 0x00000000b6ac7928, 0x00000000b8520000)
+  from space 17024K, 100% used [0x00000000b8520000, 0x00000000b95c0000, 0x00000000b95c0000)
+  to   space 17024K,   0% used [0x00000000b95c0000, 0x00000000b95c0000, 0x00000000ba660000)
+ concurrent mark-sweep generation total 200204K, used 108852K [0x00000000ba660000, 0x00000000c69e3000, 0x0000000100000000)
+ Metaspace       used 138677K, capacity 140810K, committed 141288K, reserved 1169408K
+  class space    used 20422K, capacity 20982K, committed 21080K, reserved 1048576K
+
+Card table byte_map: [0x00007f35348fc000,0x00007f3534b7d000] byte_map_base: 0x00007f353437c000
+
+Marking Bits: (CMSBitMap*) 0x00007f353004a5e8
+ Bits: [0x00007f3520d99000, 0x00007f3521eff800)
+
+Mod Union Table: (CMSBitMap*) 0x00007f353004a6a8
+ Bits: [0x00007f3537f3e000, 0x00007f3537f839a0)
+
+Polling page: 0x00007f353809f000
+
+CodeCache: size=230400Kb used=39287Kb max_used=40458Kb free=191112Kb
+ bounds [0x00007f3521f00000, 0x00007f3524700000, 0x00007f3530000000]
+ total_blobs=12844 nmethods=11874 adapters=881
+ compilation: enabled
+
+Compilation events (10 events):
+Event: 63.376 Thread 0x00007f3530116000 15258       2       java.util.IdentityHashMap$KeyIterator::<init> (12 bytes)
+Event: 63.377 Thread 0x00007f3530116000 nmethod 15258 0x00007f3522fc77d0 code [0x00007f3522fc7940, 0x00007f3522fc7ac8]
+Event: 63.377 Thread 0x00007f3530116000 15253       2       com.intellij.openapi.vfs.impl.FilePointerPartNode::<init> (79 bytes)
+Event: 63.377 Thread 0x00007f3530116000 nmethod 15253 0x00007f35226fe3d0 code [0x00007f35226fe5c0, 0x00007f35226fed18]
+Event: 63.377 Thread 0x00007f3530116000 15254       2       sun.awt.X11.XPropertyEvent::get_atom (20 bytes)
+Event: 63.378 Thread 0x00007f3530116000 nmethod 15254 0x00007f3522380450 code [0x00007f35223805c0, 0x00007f35223807e8]
+Event: 63.378 Thread 0x00007f3530116000 15259       2       java.util.Date::getTime (5 bytes)
+Event: 63.491 Thread 0x00007f3530116000 nmethod 15259 0x00007f35228108d0 code [0x00007f3522810a40, 0x00007f3522810be8]
+Event: 63.491 Thread 0x00007f3530116000 15260       2       sun.java2d.xr.XRCompositeManager::setComposite (174 bytes)
+Event: 63.492 Thread 0x00007f3530116000 nmethod 15260 0x00007f3523678450 code [0x00007f3523678660, 0x00007f3523678d88]
+
+GC Heap History (10 events):
+Event: 32.242 GC heap before
+{Heap before GC invocations=5 (full 5):
+ par new generation   total 153344K, used 152047K [0x00000000b0000000, 0x00000000ba660000, 0x00000000ba660000)
+  eden space 136320K, 100% used [0x00000000b0000000, 0x00000000b8520000, 0x00000000b8520000)
+  from space 17024K,  92% used [0x00000000b95c0000, 0x00000000ba51bd88, 0x00000000ba660000)
+  to   space 17024K,   0% used [0x00000000b8520000, 0x00000000b8520000, 0x00000000b95c0000)
+ concurrent mark-sweep generation total 100524K, used 60313K [0x00000000ba660000, 0x00000000c088b000, 0x0000000100000000)
+ Metaspace       used 96224K, capacity 97854K, committed 98280K, reserved 1134592K
+  class space    used 13561K, capacity 14061K, committed 14168K, reserved 1048576K
+Event: 32.285 GC heap after
+Heap after GC invocations=6 (full 5):
+ par new generation   total 153344K, used 17024K [0x00000000b0000000, 0x00000000ba660000, 0x00000000ba660000)
+  eden space 136320K,   0% used [0x00000000b0000000, 0x00000000b0000000, 0x00000000b8520000)
+  from space 17024K, 100% used [0x00000000b8520000, 0x00000000b95c0000, 0x00000000b95c0000)
+  to   space 17024K,   0% used [0x00000000b95c0000, 0x00000000b95c0000, 0x00000000ba660000)
+ concurrent mark-sweep generation total 100524K, used 60324K [0x00000000ba660000, 0x00000000c088b000, 0x0000000100000000)
+ Metaspace       used 96224K, capacity 97854K, committed 98280K, reserved 1134592K
+  class space    used 13561K, capacity 14061K, committed 14168K, reserved 1048576K
+}
+Event: 35.843 GC heap before
+{Heap before GC invocations=6 (full 5):
+ par new generation   total 153344K, used 153344K [0x00000000b0000000, 0x00000000ba660000, 0x00000000ba660000)
+  eden space 136320K, 100% used [0x00000000b0000000, 0x00000000b8520000, 0x00000000b8520000)
+  from space 17024K, 100% used [0x00000000b8520000, 0x00000000b95c0000, 0x00000000b95c0000)
+  to   space 17024K,   0% used [0x00000000b95c0000, 0x00000000b95c0000, 0x00000000ba660000)
+ concurrent mark-sweep generation total 100524K, used 60324K [0x00000000ba660000, 0x00000000c088b000, 0x0000000100000000)
+ Metaspace       used 102754K, capacity 104726K, committed 105064K, reserved 1138688K
+  class space    used 14441K, capacity 14960K, committed 15064K, reserved 1048576K
+Event: 35.927 GC heap after
+Heap after GC invocations=7 (full 5):
+ par new generation   total 153344K, used 17024K [0x00000000b0000000, 0x00000000ba660000, 0x00000000ba660000)
+  eden space 136320K,   0% used [0x00000000b0000000, 0x00000000b0000000, 0x00000000b8520000)
+  from space 17024K, 100% used [0x00000000b95c0000, 0x00000000ba660000, 0x00000000ba660000)
+  to   space 17024K,   0% used [0x00000000b8520000, 0x00000000b8520000, 0x00000000b95c0000)
+ concurrent mark-sweep generation total 100524K, used 70897K [0x00000000ba660000, 0x00000000c088b000, 0x0000000100000000)
+ Metaspace       used 102754K, capacity 104726K, committed 105064K, reserved 1138688K
+  class space    used 14441K, capacity 14960K, committed 15064K, reserved 1048576K
+}
+Event: 42.212 GC heap before
+{Heap before GC invocations=7 (full 6):
+ par new generation   total 153344K, used 153344K [0x00000000b0000000, 0x00000000ba660000, 0x00000000ba660000)
+  eden space 136320K, 100% used [0x00000000b0000000, 0x00000000b8520000, 0x00000000b8520000)
+  from space 17024K, 100% used [0x00000000b95c0000, 0x00000000ba660000, 0x00000000ba660000)
+  to   space 17024K,   0% used [0x00000000b8520000, 0x00000000b8520000, 0x00000000b95c0000)
+ concurrent mark-sweep generation total 108604K, used 65161K [0x00000000ba660000, 0x00000000c106f000, 0x0000000100000000)
+ Metaspace       used 116474K, capacity 118658K, committed 118888K, reserved 1150976K
+  class space    used 16388K, capacity 17052K, committed 17112K, reserved 1048576K
+Event: 42.334 GC heap after
+Heap after GC invocations=8 (full 6):
+ par new generation   total 153344K, used 17024K [0x00000000b0000000, 0x00000000ba660000, 0x00000000ba660000)
+  eden space 136320K,   0% used [0x00000000b0000000, 0x00000000b0000000, 0x00000000b8520000)
+  from space 17024K, 100% used [0x00000000b8520000, 0x00000000b95c0000, 0x00000000b95c0000)
+  to   space 17024K,   0% used [0x00000000b95c0000, 0x00000000b95c0000, 0x00000000ba660000)
+ concurrent mark-sweep generation total 108604K, used 89731K [0x00000000ba660000, 0x00000000c106f000, 0x0000000100000000)
+ Metaspace       used 116474K, capacity 118658K, committed 118888K, reserved 1150976K
+  class space    used 16388K, capacity 17052K, committed 17112K, reserved 1048576K
+}
+Event: 45.204 GC heap before
+{Heap before GC invocations=8 (full 7):
+ par new generation   total 153344K, used 153344K [0x00000000b0000000, 0x00000000ba660000, 0x00000000ba660000)
+  eden space 136320K, 100% used [0x00000000b0000000, 0x00000000b8520000, 0x00000000b8520000)
+  from space 17024K, 100% used [0x00000000b8520000, 0x00000000b95c0000, 0x00000000b95c0000)
+  to   space 17024K,   0% used [0x00000000b95c0000, 0x00000000b95c0000, 0x00000000ba660000)
+ concurrent mark-sweep generation total 115856K, used 69511K [0x00000000ba660000, 0x00000000c1784000, 0x0000000100000000)
+ Metaspace       used 118554K, capacity 120756K, committed 120936K, reserved 1153024K
+  class space    used 16595K, capacity 17279K, committed 17368K, reserved 1048576K
+Event: 45.442 GC heap after
+Heap after GC invocations=9 (full 7):
+ par new generation   total 153344K, used 17024K [0x00000000b0000000, 0x00000000ba660000, 0x00000000ba660000)
+  eden space 136320K,   0% used [0x00000000b0000000, 0x00000000b0000000, 0x00000000b8520000)
+  from space 17024K, 100% used [0x00000000b95c0000, 0x00000000ba660000, 0x00000000ba660000)
+  to   space 17024K,   0% used [0x00000000b8520000, 0x00000000b8520000, 0x00000000b95c0000)
+ concurrent mark-sweep generation total 127784K, used 123044K [0x00000000ba660000, 0x00000000c232a000, 0x0000000100000000)
+ Metaspace       used 118554K, capacity 120756K, committed 120936K, reserved 1153024K
+  class space    used 16595K, capacity 17279K, committed 17368K, reserved 1048576K
+}
+Event: 49.636 GC heap before
+{Heap before GC invocations=9 (full 8):
+ par new generation   total 153344K, used 153344K [0x00000000b0000000, 0x00000000ba660000, 0x00000000ba660000)
+  eden space 136320K, 100% used [0x00000000b0000000, 0x00000000b8520000, 0x00000000b8520000)
+  from space 17024K, 100% used [0x00000000b95c0000, 0x00000000ba660000, 0x00000000ba660000)
+  to   space 17024K,   0% used [0x00000000b8520000, 0x00000000b8520000, 0x00000000b95c0000)
+ concurrent mark-sweep generation total 200204K, used 120120K [0x00000000ba660000, 0x00000000c69e3000, 0x0000000100000000)
+ Metaspace       used 134182K, capacity 136304K, committed 136680K, reserved 1165312K
+  class space    used 19851K, capacity 20455K, committed 20568K, reserved 1048576K
+Event: 49.750 GC heap after
+Heap after GC invocations=10 (full 8):
+ par new generation   total 153344K, used 17024K [0x00000000b0000000, 0x00000000ba660000, 0x00000000ba660000)
+  eden space 136320K,   0% used [0x00000000b0000000, 0x00000000b0000000, 0x00000000b8520000)
+  from space 17024K, 100% used [0x00000000b8520000, 0x00000000b95c0000, 0x00000000b95c0000)
+  to   space 17024K,   0% used [0x00000000b95c0000, 0x00000000b95c0000, 0x00000000ba660000)
+ concurrent mark-sweep generation total 200204K, used 139590K [0x00000000ba660000, 0x00000000c69e3000, 0x0000000100000000)
+ Metaspace       used 134182K, capacity 136304K, committed 136680K, reserved 1165312K
+  class space    used 19851K, capacity 20455K, committed 20568K, reserved 1048576K
+}
+
+Deoptimization events (10 events):
+Event: 58.025 Thread 0x00007f34f6dd8000 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007f35232a1930 method=com.intellij.util.text.ImmutableText.toBytesIfPossible(Ljava/lang/CharSequence;)[B @ 1
+Event: 58.025 Thread 0x00007f34f6dd8000 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007f35232a1930 method=com.intellij.util.text.ImmutableText.toBytesIfPossible(Ljava/lang/CharSequence;)[B @ 1
+Event: 58.025 Thread 0x00007f34f6dd8000 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007f35239815c8 method=com.intellij.openapi.util.text.LineTokenizer.advance()V @ 19
+Event: 58.025 Thread 0x00007f34f6dd8000 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007f35239815c8 method=com.intellij.openapi.util.text.LineTokenizer.advance()V @ 19
+Event: 58.025 Thread 0x00007f34f6dd8000 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007f35232a1930 method=com.intellij.util.text.ImmutableText.toBytesIfPossible(Ljava/lang/CharSequence;)[B @ 1
+Event: 58.025 Thread 0x00007f34f6dd8000 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007f3524005344 method=com.intellij.util.text.ImmutableText.toBytesIfPossible(Ljava/lang/CharSequence;)[B @ 19
+Event: 58.025 Thread 0x00007f34f6dd8000 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007f35239815c8 method=com.intellij.openapi.util.text.LineTokenizer.advance()V @ 19
+Event: 58.025 Thread 0x00007f34f6dd8000 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007f35239815c8 method=com.intellij.openapi.util.text.LineTokenizer.advance()V @ 19
+Event: 58.050 Thread 0x00007f34f6dd8000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f352323b6a8 method=com.intellij.util.io.Page.ensureRead()V @ 11
+Event: 58.096 Thread 0x00007f34f6dd8000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f35246227ec method=java.awt.EventQueue.setCurrentEventAndMostRecentTimeImpl(Ljava/awt/AWTEvent;)V @ 16
+
+Internal exceptions (10 events):
+Event: 34.081 Thread 0x00007f34f4188000 Implicit null exception at 0x00007f3523208154 to 0x00007f35232083ed
+Event: 34.429 Thread 0x00007f34f4188000 Implicit null exception at 0x00007f352224edf2 to 0x00007f352224f3f9
+Event: 35.617 Thread 0x00007f34f4188000 Implicit null exception at 0x00007f352386ce1f to 0x00007f352386d3cd
+Event: 36.942 Thread 0x00007f34f4188000 Implicit null exception at 0x00007f352363c8ba to 0x00007f352363f289
+Event: 43.279 Thread 0x00007f34f7323800 Implicit null exception at 0x00007f35235213b4 to 0x00007f3523521921
+Event: 43.312 Thread 0x00007f34f4188000 Implicit null exception at 0x00007f3523a5a16c to 0x00007f3523a5a1a9
+Event: 44.903 Thread 0x00007f34f4188000 Implicit null exception at 0x00007f352356e771 to 0x00007f352356e7ea
+Event: 45.567 Thread 0x00007f34f7324800 Implicit null exception at 0x00007f3522d80b0c to 0x00007f3522d80bd1
+Event: 50.731 Thread 0x00007f34f7324800 Implicit null exception at 0x00007f352372eb53 to 0x00007f352372ed59
+Event: 52.191 Thread 0x00007f34f4188000 Exception <a 'java/lang/UnsupportedOperationException': > (0x00000000b3f97a08) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u71/5731/hotspot/src/share/vm/prims/jni.cpp, line 735]
+
+Events (10 events):
+Event: 63.340 Thread 0x00007f34f6dd8000 DEOPT UNPACKING pc=0x00007f3521f46f73 sp=0x00007f34d24eda70 mode 0
+Event: 63.341 Thread 0x00007f34f6dd8000 DEOPT PACKING pc=0x00007f35237191ec sp=0x00007f34d24ed410
+Event: 63.341 Thread 0x00007f34f6dd8000 DEOPT UNPACKING pc=0x00007f3521f46f73 sp=0x00007f34d24ed270 mode 0
+Event: 63.359 loading class sun/awt/X11/XAWTXSettings$1
+Event: 63.360 loading class sun/awt/X11/XAWTXSettings$1 done
+Event: 63.374 loading class sun/awt/X11/XDestroyWindowEvent
+Event: 63.374 loading class sun/awt/X11/XDestroyWindowEvent done
+Event: 63.595 Executing VM operation: RevokeBias
+Event: 63.595 loading class sun/misc/Signal$1
+Event: 63.595 loading class sun/misc/Signal$1 done
+
+
+Dynamic libraries:
+00400000-00401000 r-xp 00000000 08:01 3673446                            /home/neethu/Intern/Tools/jdk1.8.0_71/bin/java
+00600000-00601000 rw-p 00000000 08:01 3673446                            /home/neethu/Intern/Tools/jdk1.8.0_71/bin/java
+01efc000-01f1d000 rw-p 00000000 00:00 0                                  [heap]
+b0000000-c69e3000 rw-p 00000000 00:00 0 
+c69e3000-100000000 ---p 00000000 00:00 0 
+100000000-101496000 rw-p 00000000 00:00 0 
+101496000-140000000 ---p 00000000 00:00 0 
+7f34ccd4a000-7f34ccd4d000 ---p 00000000 00:00 0 
+7f34ccd4d000-7f34cce4b000 rw-p 00000000 00:00 0                          [stack:13287]
+7f34cce4b000-7f34cce4e000 ---p 00000000 00:00 0 
+7f34cce4e000-7f34ccf4c000 rw-p 00000000 00:00 0                          [stack:13286]
+7f34ccf4c000-7f34ccf4f000 ---p 00000000 00:00 0 
+7f34ccf4f000-7f34cd04d000 rw-p 00000000 00:00 0 
+7f34cd04d000-7f34cd050000 ---p 00000000 00:00 0 
+7f34cd050000-7f34cd14e000 rw-p 00000000 00:00 0 
+7f34cd14e000-7f34cd151000 ---p 00000000 00:00 0 
+7f34cd151000-7f34cd3cf000 rw-p 00000000 00:00 0 
+7f34cd3cf000-7f34cd44f000 ---p 00000000 00:00 0 
+7f34cd44f000-7f34cd64f000 rw-p 00000000 00:00 0 
+7f34cd64f000-7f34cd84f000 rw-p 00000000 00:00 0 
+7f34cd84f000-7f34cda4f000 rw-p 00000000 00:00 0 
+7f34cda4f000-7f34cdc4f000 rw-p 00000000 00:00 0 
+7f34cdc4f000-7f34cde4f000 rw-p 00000000 00:00 0 
+7f34cde4f000-7f34ce04f000 rw-p 00000000 00:00 0 
+7f34ce04f000-7f34ce24f000 rw-p 00000000 00:00 0 
+7f34ce24f000-7f34ce44f000 rw-p 00000000 00:00 0 
+7f34ce44f000-7f34ce64f000 rw-p 00000000 00:00 0 
+7f34ce64f000-7f34ce84f000 rw-p 00000000 00:00 0 
+7f34ce84f000-7f34cea4f000 rw-p 00000000 00:00 0 
+7f34cea4f000-7f34cec4f000 rw-p 00000000 00:00 0 
+7f34cec4f000-7f34cec52000 ---p 00000000 00:00 0 
+7f34cec52000-7f34cef50000 rw-p 00000000 00:00 0                          [stack:13266]
+7f34cef50000-7f34cef53000 ---p 00000000 00:00 0 
+7f34cef53000-7f34cf251000 rw-p 00000000 00:00 0                          [stack:13280]
+7f34cf251000-7f34cf451000 rw-p 00000000 00:00 0 
+7f34cf451000-7f34cf651000 rw-p 00000000 00:00 0 
+7f34cf651000-7f34cf851000 rw-p 00000000 00:00 0 
+7f34cf851000-7f34cfa51000 rw-p 00000000 00:00 0 
+7f34cfa51000-7f34cfa54000 ---p 00000000 00:00 0 
+7f34cfa54000-7f34cfd52000 rw-p 00000000 00:00 0                          [stack:13206]
+7f34cfd52000-7f34cfd55000 ---p 00000000 00:00 0 
+7f34cfd55000-7f34cfe53000 rw-p 00000000 00:00 0                          [stack:13205]
+7f34cfe53000-7f34cfe56000 ---p 00000000 00:00 0 
+7f34cfe56000-7f34d0154000 rw-p 00000000 00:00 0                          [stack:13203]
+7f34d0154000-7f34d0157000 ---p 00000000 00:00 0 
+7f34d0157000-7f34d0455000 rw-p 00000000 00:00 0                          [stack:13200]
+7f34d0455000-7f34d0655000 rw-p 00000000 00:00 0 
+7f34d0655000-7f34d0855000 rw-p 00000000 00:00 0 
+7f34d0855000-7f34d0858000 ---p 00000000 00:00 0 
+7f34d0858000-7f34d0956000 rw-p 00000000 00:00 0                          [stack:13198]
+7f34d0956000-7f34d0959000 ---p 00000000 00:00 0 
+7f34d0959000-7f34d0a57000 rw-p 00000000 00:00 0                          [stack:13197]
+7f34d0a57000-7f34d0a5a000 ---p 00000000 00:00 0 
+7f34d0a5a000-7f34d0d58000 rw-p 00000000 00:00 0                          [stack:13196]
+7f34d0d58000-7f34d0f58000 rw-p 00000000 00:00 0 
+7f34d0f58000-7f34d1158000 rw-p 00000000 00:00 0 
+7f34d1158000-7f34d1358000 rw-p 00000000 00:00 0 
+7f34d1358000-7f34d1558000 rw-p 00000000 00:00 0 
+7f34d1558000-7f34d1758000 rw-p 00000000 00:00 0 
+7f34d1758000-7f34d1958000 rw-p 00000000 00:00 0 
+7f34d1958000-7f34d195b000 ---p 00000000 00:00 0 
+7f34d195b000-7f34d1c59000 rw-p 00000000 00:00 0                          [stack:13248]
+7f34d1c59000-7f34d1c5c000 ---p 00000000 00:00 0 
+7f34d1c5c000-7f34d1d5a000 rw-p 00000000 00:00 0                          [stack:13194]
+7f34d1d5a000-7f34d1dc4000 rw-s 00000000 00:05 73269265                   /SYSV00000000 (deleted)
+7f34d1dc4000-7f34d1dee000 r-xp 00000000 08:01 5243959                    /home/neethu/Intern/Tools/jdk1.8.0_71/jre/lib/amd64/libdcpr.so
+7f34d1dee000-7f34d1fee000 ---p 0002a000 08:01 5243959                    /home/neethu/Intern/Tools/jdk1.8.0_71/jre/lib/amd64/libdcpr.so
+7f34d1fee000-7f34d1ff1000 rw-p 0002a000 08:01 5243959                    /home/neethu/Intern/Tools/jdk1.8.0_71/jre/lib/amd64/libdcpr.so
+7f34d1ff1000-7f34d21f1000 rw-p 00000000 00:00 0 
+7f34d21f1000-7f34d23f1000 rw-p 00000000 00:00 0 
+7f34d23f1000-7f34d23f4000 ---p 00000000 00:00 0 
+7f34d23f4000-7f34d24f2000 rw-p 00000000 00:00 0                          [stack:13166]
+7f34d24f2000-7f34d24f5000 ---p 00000000 00:00 0 
+7f34d24f5000-7f34d27f3000 rw-p 00000000 00:00 0 
+7f34d27f3000-7f34d2820000 r--s 001e1000 08:01 5507874                    /home/neethu/Intern/Tools/android-studio/plugins/google-login/lib/google-api-java-client-min-repackaged-1.20.0.jar
+7f34d2820000-7f34d2825000 r-xp 00000000 08:01 4460723                    /lib/x86_64-linux-gnu/libnss_dns-2.19.so
+7f34d2825000-7f34d2a24000 ---p 00005000 08:01 4460723                    /lib/x86_64-linux-gnu/libnss_dns-2.19.so
+7f34d2a24000-7f34d2a25000 r--p 00004000 08:01 4460723                    /lib/x86_64-linux-gnu/libnss_dns-2.19.so
+7f34d2a25000-7f34d2a26000 rw-p 00005000 08:01 4460723                    /lib/x86_64-linux-gnu/libnss_dns-2.19.so
+7f34d2a26000-7f34d2a28000 r-xp 00000000 08:01 4460731                    /lib/x86_64-linux-gnu/libnss_mdns4_minimal.so.2
+7f34d2a28000-7f34d2c27000 ---p 00002000 08:01 4460731                    /lib/x86_64-linux-gnu/libnss_mdns4_minimal.so.2
+7f34d2c27000-7f34d2c28000 r--p 00001000 08:01 4460731                    /lib/x86_64-linux-gnu/libnss_mdns4_minimal.so.2
+7f34d2c28000-7f34d2c29000 rw-p 00002000 08:01 4460731                    /lib/x86_64-linux-gnu/libnss_mdns4_minimal.so.2
+7f34d2c2a000-7f34d2c2c000 r--s 00013000 08:01 5508095                    /home/neethu/Intern/Tools/android-studio/plugins/google-services/lib/google-services.jar
+7f34d2c2c000-7f34d2c33000 r--s 0003d000 08:01 5508094                    /home/neethu/Intern/Tools/android-studio/plugins/google-services/lib/google-api-services-analytics-v3-rev115-1.20.0.jar
+7f34d2c33000-7f34d2c35000 r--s 00024000 08:01 5507871                    /home/neethu/Intern/Tools/android-studio/plugins/google-login/lib/google-login.jar
+7f34d2c35000-7f34d2c36000 r--s 00000000 08:01 5507878                    /home/neethu/Intern/Tools/android-studio/plugins/google-login/lib/google-gct-login-context-pg.jar
+7f34d2c36000-7f34d2c39000 r--s 00012000 08:01 5507875                    /home/neethu/Intern/Tools/android-studio/plugins/google-login/lib/javax.servlet-api-3.0.1.jar
+7f34d2c39000-7f34d2c3d000 r--s 00035000 08:01 5507877                    /home/neethu/Intern/Tools/android-studio/plugins/google-login/lib/jackson-core-asl-1.9.11.jar
+7f34d2c3d000-7f34d2c3e000 r--s 00003000 08:01 5507873                    /home/neethu/Intern/Tools/android-studio/plugins/google-login/lib/google-api-services-oauth2-v2-rev70-1.18.0-rc.jar
+7f34d2c3e000-7f34d2c40000 r--s 00004000 08:01 5507876                    /home/neethu/Intern/Tools/android-studio/plugins/google-login/lib/google.gdt.eclipse.login.common.jar
+7f34d2c40000-7f34d2e40000 rw-p 00000000 00:00 0 
+7f34d2e40000-7f34d2e43000 ---p 00000000 00:00 0 
+7f34d2e43000-7f34d2f41000 rw-p 00000000 00:00 0                          [stack:13163]
+7f34d2f41000-7f34d2f44000 ---p 00000000 00:00 0 
+7f34d2f44000-7f34d3042000 rw-p 00000000 00:00 0                          [stack:13162]
+7f34d3042000-7f34d3045000 ---p 00000000 00:00 0 
+7f34d3045000-7f34d3343000 rw-p 00000000 00:00 0                          [stack:13161]
+7f34d3343000-7f34d3535000 rw-p 00000000 00:00 0 
+7f34d3535000-7f34d3543000 ---p 00000000 00:00 0 
+7f34d3543000-7f34d373d000 rw-p 00000000 00:00 0 
+7f34d373d000-7f34d3743000 ---p 00000000 00:00 0 
+7f34d3743000-7f34d3943000 rw-p 00000000 00:00 0 
+7f34d3943000-7f34d3952000 r--s 000c8000 08:01 5508066                    /home/neethu/Intern/Tools/android-studio/plugins/coverage/lib/freemarker.jar
+7f34d3952000-7f34d395a000 r--s 000a2000 08:01 5508063                    /home/neethu/Intern/Tools/android-studio/plugins/coverage/lib/jacocoant.jar
+7f34d395a000-7f34d395e000 r--s 00012000 08:01 5508064                    /home/neethu/Intern/Tools/android-studio/plugins/coverage/lib/coverage-report.jar
+7f34d395e000-7f34d3b5e000 rw-p 00000000 00:00 0 
+7f34d3b5e000-7f34d3d5e000 rw-p 00000000 00:00 0 
+7f34d3d5e000-7f34d3d61000 ---p 00000000 00:00 0 
+7f34d3d61000-7f34d3e5f000 rw-p 00000000 00:00 0                          [stack:13131]
+7f34d3e5f000-7f34d3e62000 ---p 00000000 00:00 0 
+7f34d3e62000-7f34d3f60000 rw-p 00000000 00:00 0                          [stack:13130]
+7f34d3f60000-7f34d3f63000 ---p 00000000 00:00 0 
+7f34d3f63000-7f34d4261000 rw-p 00000000 00:00 0                          [stack:13129]
+7f34d4261000-7f34d4264000 ---p 00000000 00:00 0 
+7f34d4264000-7f34d4362000 rw-p 00000000 00:00 0                          [stack:13128]
+7f34d4362000-7f34d4394000 r-xp 00000000 08:01 5243925                    /home/neethu/Intern/Tools/jdk1.8.0_71/jre/lib/amd64/libsunec.so
+7f34d4394000-7f34d4593000 ---p 00032000 08:01 5243925                    /home/neethu/Intern/Tools/jdk1.8.0_71/jre/lib/amd64/libsunec.so
+7f34d4593000-7f34d4599000 rw-p 00031000 08:01 5243925                    /home/neethu/Intern/Tools/jdk1.8.0_71/jre/lib/amd64/libsunec.so
+7f34d4599000-7f34d47a9000 rw-p 00000000 00:00 0 
+7f34d47a9000-7f34d47ac000 ---p 00000000 00:00 0 
+7f34d47ac000-7f34d48aa000 rw-p 00000000 00:00 0                          [stack:13119]
+7f34d48aa000-7f34d48ad000 ---p 00000000 00:00 0 
+7f34d48ad000-7f34d4bab000 rw-p 00000000 00:00 0                          [stack:13118]
+7f34d4bab000-7f34d4dab000 rw-p 00000000 00:00 0 
+7f34d4dab000-7f34d4dae000 ---p 00000000 00:00 0 
+7f34d4dae000-7f34d4eac000 rw-p 00000000 00:00 0                          [stack:13117]
+7f34d4eac000-7f34d4eaf000 ---p 00000000 00:00 0 
+7f34d4eaf000-7f34d4fad000 rw-p 00000000 00:00 0                          [stack:13116]
+7f34d4fad000-7f34d4fb0000 ---p 00000000 00:00 0 
+7f34d4fb0000-7f34d50ae000 rw-p 00000000 00:00 0                          [stack:13115]
+7f34d50ae000-7f34d50b1000 ---p 00000000 00:00 0 
+7f34d50b1000-7f34d5830000 rw-p 00000000 00:00 0                          [stack:13113]
+7f34d5830000-7f34d583b000 r--s 0008e000 08:01 5509169                    /home/neethu/Intern/Tools/android-studio/plugins/android/lib/jgraphx-3.4.0.1.jar
+7f34d583b000-7f34d583d000 r--s 00006000 08:01 5509171                    /home/neethu/Intern/Tools/android-studio/plugins/android/lib/asm-tree-5.0.3.jar
+7f34d583d000-7f34d5879000 r--s 0052f000 08:01 5508286                    /home/neethu/Intern/Tools/android-studio/plugins/android/lib/sdk-tools.jar
+7f34d5879000-7f34d587c000 r--s 00011000 08:01 5508109                    /home/neethu/Intern/Tools/android-studio/plugins/android/lib/resources_en.jar
+7f34d587c000-7f34d587d000 r--s 00004000 08:01 5508105                    /home/neethu/Intern/Tools/android-studio/plugins/android/lib/asm-analysis-5.0.3.jar
+7f34d587d000-7f34d5880000 r--s 00006000 08:01 5508115                    /home/neethu/Intern/Tools/android-studio/plugins/android/lib/jsr305-1.3.9.jar
+7f34d5880000-7f34d588c000 r--s 0016f000 08:01 5508111                    /home/neethu/Intern/Tools/android-studio/plugins/android/lib/data-binding.jar
+7f34d588c000-7f34d5894000 r--s 00175000 08:01 5508116                    /home/neethu/Intern/Tools/android-studio/plugins/android/lib/sdklib.jar
+7f34d5894000-7f34d5895000 r--s 00003000 08:01 5509173                    /home/neethu/Intern/Tools/android-studio/plugins/android/lib/jarutils.jar
+7f34d5895000-7f34d5968000 r--s 018cf000 08:01 5509172                    /home/neethu/Intern/Tools/android-studio/plugins/android/lib/android.jar
+7f34d5968000-7f34d5976000 r--s 00081000 08:01 5508289                    /home/neethu/Intern/Tools/android-studio/plugins/android/lib/bcpkix-jdk15on-1.48.jar
+7f34d5976000-7f34d5978000 r--s 00031000 08:01 5508107                    /home/neethu/Intern/Tools/android-studio/plugins/android/lib/common.jar
+7f34d5978000-7f34d5980000 r--s 000a8000 08:01 5508114                    /home/neethu/Intern/Tools/android-studio/plugins/android/lib/lombok-ast-0.2.3.jar
+7f34d5980000-7f34d5982000 r--s 00036000 08:01 5508113                    /home/neethu/Intern/Tools/android-studio/plugins/android/lib/android-common.jar
+7f34d5982000-7f34d5984000 r--s 00005000 08:01 5508110                    /home/neethu/Intern/Tools/android-studio/plugins/android/lib/builder-model-2.0.0-alpha7.jar
+7f34d5984000-7f34d5987000 r--s 0005c000 08:01 5508284                    /home/neethu/Intern/Tools/android-studio/plugins/android/lib/manifest-merger.jar
+7f34d5987000-7f34d598a000 r--s 00033000 08:01 5508104                    /home/neethu/Intern/Tools/android-studio/plugins/android/lib/juniversalchardet-1.0.3.jar
+7f34d598a000-7f34d598e000 r--s 000e0000 08:01 5508285                    /home/neethu/Intern/Tools/android-studio/plugins/android/lib/androidAnnotations.jar
+7f34d598e000-7f34d5990000 r--s 00000000 08:01 5508101                    /home/neethu/Intern/Tools/android-studio/plugins/android/lib/spantable.jar
+7f34d5990000-7f34d5994000 r--s 00020000 08:01 5508310                    /home/neethu/Intern/Tools/android-studio/plugins/android/lib/commons-compress-1.0.jar
+7f34d5994000-7f34d5999000 r--s 00056000 08:01 5508287                    /home/neethu/Intern/Tools/android-studio/plugins/android/lib/repository.jar
+7f34d5999000-7f34d59aa000 r--s 000e8000 08:01 5509170                    /home/neethu/Intern/Tools/android-studio/plugins/android/lib/freemarker-2.3.20.jar
+7f34d59aa000-7f34d59b1000 r--s 00062000 08:01 5508103                    /home/neethu/Intern/Tools/android-studio/plugins/android/lib/antlr4-runtime-4.5.jar
+7f34d59b1000-7f34d59ba000 r--s 0010e000 08:01 5508308                    /home/neethu/Intern/Tools/android-studio/plugins/android/lib/sdk-common.jar
+7f34d59ba000-7f34d59bc000 r--s 00002000 08:01 5509168                    /home/neethu/Intern/Tools/android-studio/plugins/android/lib/android-rt.jar
+7f34d59bc000-7f34d59c4000 r--s 000dd000 08:01 5508046                    /home/neethu/Intern/Tools/android-studio/plugins/google-cloud-tools-core/lib/google-cloud-tools-core.jar
+7f34d59c4000-7f34d59e2000 r--s 001ac000 08:01 5508048                    /home/neethu/Intern/Tools/android-studio/plugins/google-cloud-tools-core/lib/org.eclipse.jgit-3.3.0.201403021825-r.jar
+7f34d59e2000-7f34d5a5d000 r--s 00d34000 08:01 5508034                    /home/neethu/Intern/Tools/android-studio/plugins/Groovy/lib/Groovy.jar
+7f34d5a5d000-7f34d5a5e000 r-xp 00000000 08:01 5243973                    /home/neethu/Intern/Tools/jdk1.8.0_71/jre/lib/amd64/libjawt.so
+7f34d5a5e000-7f34d5c5d000 ---p 00001000 08:01 5243973                    /home/neethu/Intern/Tools/jdk1.8.0_71/jre/lib/amd64/libjawt.so
+7f34d5c5d000-7f34d5c5e000 rw-p 00000000 08:01 5243973                    /home/neethu/Intern/Tools/jdk1.8.0_71/jre/lib/amd64/libjawt.so
+7f34d5c5e000-7f34d5e5e000 rw-p 00000000 00:00 0 
+7f34d5e5e000-7f34d605d000 rw-p 00000000 00:00 0 
+7f34d605d000-7f34d605e000 ---p 00000000 00:00 0 
+7f34d605e000-7f34d605f000 r--s 00002000 08:01 5508290                    /home/neethu/Intern/Tools/android-studio/plugins/android/lib/javawriter-2.2.1.jar
+7f34d605f000-7f34d6061000 r--s 00003000 08:01 5508044                    /home/neethu/Intern/Tools/android-studio/plugins/google-cloud-tools-core/lib/google-api-services-developerprojects-v1-rev20140815212553-1.19.0.jar
+7f34d6061000-7f34d6062000 r--s 00009000 08:01 5508050                    /home/neethu/Intern/Tools/android-studio/plugins/google-cloud-tools-core/lib/org.eclipse.jgit.junit-3.0.0.201306101825-r.jar
+7f34d6062000-7f34d6063000 r--s 00000000 08:01 5508045                    /home/neethu/Intern/Tools/android-studio/plugins/google-cloud-tools-core/lib/gradle-appengine-builder-model-0.1.0.jar
+7f34d6063000-7f34d6065000 r--s 00009000 08:01 5508049                    /home/neethu/Intern/Tools/android-studio/plugins/google-cloud-tools-core/lib/google-api-services-debugger.jar
+7f34d6065000-7f34d6066000 r--s 00002000 08:01 5508047                    /home/neethu/Intern/Tools/android-studio/plugins/google-cloud-tools-core/lib/google-api-services-source.jar
+7f34d6066000-7f34d6068000 r--s 00026000 08:01 5508032                    /home/neethu/Intern/Tools/android-studio/plugins/Groovy/lib/groovy-jps-plugin.jar
+7f34d6068000-7f34d6069000 r--s 00001000 08:01 5508028                    /home/neethu/Intern/Tools/android-studio/plugins/Groovy/lib/groovy-rt-constants.jar
+7f34d6069000-7f34d606b000 r--s 00012000 08:01 5508035                    /home/neethu/Intern/Tools/android-studio/plugins/Groovy/lib/groovy_rt.jar
+7f34d60aa000-7f34d60ab000 r--s 00000000 08:01 5508073                    /home/neethu/Intern/Tools/android-studio/plugins/analytics/lib/analytics.jar
+7f34d60bb000-7f34d60bd000 r--s 00009000 08:01 5508081                    /home/neethu/Intern/Tools/android-studio/plugins/google-appindexing/lib/fetchasgoogle.jar
+7f34d60bd000-7f34d60c0000 r--s 00043000 08:01 5508082                    /home/neethu/Intern/Tools/android-studio/plugins/google-appindexing/lib/google-appindexing.jar
+7f34d60c0000-7f34d60e1000 r--s 00162000 08:01 5508080                    /home/neethu/Intern/Tools/android-studio/plugins/google-appindexing/lib/mockito-all-1.9.5.jar
+7f34d60e1000-7f34d614a000 r-xp 00000000 08:01 5243931                    /home/neethu/Intern/Tools/jdk1.8.0_71/jre/lib/amd64/libt2k.so
+7f34d614a000-7f34d634a000 ---p 00069000 08:01 5243931                    /home/neethu/Intern/Tools/jdk1.8.0_71/jre/lib/amd64/libt2k.so
+7f34d634a000-7f34d6351000 rw-p 00069000 08:01 5243931                    /home/neethu/Intern/Tools/jdk1.8.0_71/jre/lib/amd64/libt2k.so
+7f34d6351000-7f34d6361000 rw-p 00000000 00:00 0 
+7f34d6361000-7f34d6364000 ---p 00000000 00:00 0 
+7f34d6364000-7f34d6462000 rw-p 00000000 00:00 0 
+7f34d6462000-7f34d64c3000 r-xp 00000000 08:01 5243921                    /home/neethu/Intern/Tools/jdk1.8.0_71/jre/lib/amd64/libsplashscreen.so
+7f34d64c3000-7f34d66c3000 ---p 00061000 08:01 5243921                    /home/neethu/Intern/Tools/jdk1.8.0_71/jre/lib/amd64/libsplashscreen.so
+7f34d66c3000-7f34d66c4000 rw-p 00061000 08:01 5243921                    /home/neethu/Intern/Tools/jdk1.8.0_71/jre/lib/amd64/libsplashscreen.so
+7f34d66c4000-7f34d68c0000 rw-p 00000000 00:00 0 
+7f34d68c0000-7f34d68c7000 ---p 00000000 00:00 0 
+7f34d68c7000-7f34d68ca000 ---p 00000000 00:00 0 
+7f34d68ca000-7f34d69c8000 rw-p 00000000 00:00 0                          [stack:13094]
+7f34d69c8000-7f34d69cb000 ---p 00000000 00:00 0 
+7f34d69cb000-7f34d6ac9000 rw-p 00000000 00:00 0                          [stack:13092]
+7f34d6ac9000-7f34d6aca000 r--s 00001000 08:01 5507872                    /home/neethu/Intern/Tools/android-studio/plugins/google-login/lib/google-http-client-jackson-1.18.0-rc.jar
+7f34d6aca000-7f34d6ad0000 r--s 00041000 08:01 5508067                    /home/neethu/Intern/Tools/android-studio/plugins/coverage/lib/jacocoagent.jar
+7f34d6ad0000-7f34d6ad7000 r--s 000b7000 08:01 5508062                    /home/neethu/Intern/Tools/android-studio/plugins/coverage/lib/coverage.jar
+7f34d6ad7000-7f34d6ad8000 r--s 00001000 08:01 5508065                    /home/neethu/Intern/Tools/android-studio/plugins/coverage/lib/coverage_rt.jar
+7f34d6ad8000-7f34d6ad9000 r--s 00001000 08:01 5508061                    /home/neethu/Intern/Tools/android-studio/plugins/coverage/lib/coverage-report-idea.jar
+7f34d6ad9000-7f34d6ae3000 r--s 00165000 08:01 5507916                    /home/neethu/Intern/Tools/android-studio/plugins/java-decompiler/lib/java-decompiler.jar
+7f34d6ae3000-7f34d6ae5000 r--s 00003000 08:01 5507920                    /home/neethu/Intern/Tools/android-studio/plugins/google-cloud-tools/lib/google-api-services-developerprojects-v1-rev20140815212553-1.19.0.jar
+7f34d6ae5000-7f34d6ae6000 r--s 00004000 08:01 5507922                    /home/neethu/Intern/Tools/android-studio/plugins/google-cloud-tools/lib/samplesindex-v1-1.0-SNAPSHOT.jar
+7f34d6ae6000-7f34d6aed000 r--s 0008e000 08:01 5507919                    /home/neethu/Intern/Tools/android-studio/plugins/google-cloud-tools/lib/google-cloud-tools.jar
+7f34d6aed000-7f34d6aee000 r--s 00000000 08:01 5507921                    /home/neethu/Intern/Tools/android-studio/plugins/google-cloud-tools/lib/gradle-appengine-builder-model-0.1.0.jar
+7f34d6aee000-7f34d6af0000 r--s 00009000 08:01 5507945                    /home/neethu/Intern/Tools/android-studio/plugins/google-cloud-tools/lib/google-api-services-debugger.jar
+7f34d6af0000-7f34d6af1000 r--s 00002000 08:01 5507923                    /home/neethu/Intern/Tools/android-studio/plugins/google-cloud-tools/lib/google-api-services-source.jar
+7f34d6af1000-7f34d6af9000 r--s 000c1000 08:01 5508039                    /home/neethu/Intern/Tools/android-studio/plugins/testng/lib/testng-plugin.jar
+7f34d6af9000-7f34d6afb000 r--s 00002000 08:01 5508038                    /home/neethu/Intern/Tools/android-studio/plugins/testng/lib/resources_en.jar
+7f34d6afb000-7f34d6afd000 r--s 0000c000 08:01 5508040                    /home/neethu/Intern/Tools/android-studio/plugins/testng/lib/jcommander.jar
+7f34d6afd000-7f34d6b0b000 r--s 001a7000 08:01 5508041                    /home/neethu/Intern/Tools/android-studio/plugins/testng/lib/testng.jar
+7f34d6b0b000-7f34d6b0d000 r--s 00023000 08:01 5508011                    /home/neethu/Intern/Tools/android-studio/plugins/junit/lib/junit-rt.jar
+7f34d6b0d000-7f34d6b0e000 r--s 00003000 08:01 5508010                    /home/neethu/Intern/Tools/android-studio/plugins/junit/lib/resources_en.jar
+7f34d6b0e000-7f34d6b15000 r--s 000a3000 08:01 5508012                    /home/neethu/Intern/Tools/android-studio/plugins/junit/lib/idea-junit.jar
+7f34d6b15000-7f34d6b16000 r--s 00000000 08:01 5637249                    /home/neethu/Intern/Tools/android-studio/plugins/java-i18n/lib/resources_en.jar
+7f34d6b16000-7f34d6b1b000 r--s 00073000 08:01 5637250                    /home/neethu/Intern/Tools/android-studio/plugins/java-i18n/lib/java-i18n.jar
+7f34d6b1b000-7f34d6b1e000 ---p 00000000 00:00 0 
+7f34d6b1e000-7f34d6b54000 rw-p 00000000 00:00 0                          [stack:13127]
+7f34d6b54000-7f34d6b57000 r--s 0001a000 08:01 4198848                    /home/neethu/Intern/Tools/jdk1.8.0_71/jre/lib/jce.jar
+7f34d6b57000-7f34d6b59000 r--s 00008000 08:01 5507864                    /home/neethu/Intern/Tools/android-studio/plugins/settings-repository/lib/jackson-annotations-2.5.1.jar
+7f34d6b59000-7f34d6b78000 r--s 001cf000 08:01 5507868                    /home/neethu/Intern/Tools/android-studio/plugins/settings-repository/lib/jgit.jar
+7f34d6b78000-7f34d6b79000 r--s 00000000 08:01 5507863                    /home/neethu/Intern/Tools/android-studio/plugins/settings-repository/lib/resources_en.jar
+7f34d6b79000-7f34d6b8b000 r--s 00105000 08:01 5507867                    /home/neethu/Intern/Tools/android-studio/plugins/settings-repository/lib/jackson-databind-2.5.1.jar
+7f34d6b8b000-7f34d6b8f000 r--s 00035000 08:01 5507865                    /home/neethu/Intern/Tools/android-studio/plugins/settings-repository/lib/jackson-core-2.5.1.jar
+7f34d6b8f000-7f34d6b94000 r--s 00084000 08:01 5507866                    /home/neethu/Intern/Tools/android-studio/plugins/settings-repository/lib/settings-repository.jar
+7f34d6b94000-7f34d6b97000 r--s 00034000 08:01 5508088                    /home/neethu/Intern/Tools/android-studio/plugins/terminal/lib/terminal.jar
+7f34d6b97000-7f34d6b98000 r--s 00000000 08:01 5508085                    /home/neethu/Intern/Tools/android-studio/plugins/terminal/lib/resources_en.jar
+7f34d6b98000-7f34d6b9d000 r--s 00034000 08:01 5508086                    /home/neethu/Intern/Tools/android-studio/plugins/terminal/lib/jediterm-pty-2.0.jar
+7f34d6b9d000-7f34d6b9f000 r--s 00008000 08:01 5507884                    /home/neethu/Intern/Tools/android-studio/plugins/gradle/lib/gradle-resources-2.5.jar
+7f34d6b9f000-7f34d6ba1000 r--s 00008000 08:01 5507910                    /home/neethu/Intern/Tools/android-studio/plugins/gradle/lib/gradle-native-2.5.jar
+7f34d6ba1000-7f34d6ba4000 r--s 0000d000 08:01 5507904                    /home/neethu/Intern/Tools/android-studio/plugins/gradle/lib/native-platform-0.10.jar
+7f34d6ba4000-7f34d6bab000 r--s 00031000 08:01 5507887                    /home/neethu/Intern/Tools/android-studio/plugins/gradle/lib/gradle-base-services-2.5.jar
+7f34d6bab000-7f34d6bad000 r--s 00006000 08:01 5507909                    /home/neethu/Intern/Tools/android-studio/plugins/gradle/lib/gradle-model-groovy-2.5.jar
+7f34d6bad000-7f34d6bb2000 r--s 0002d000 08:01 5507898                    /home/neethu/Intern/Tools/android-studio/plugins/gradle/lib/kryo-2.22.jar
+7f34d6bb2000-7f34d6bbb000 r--s 0003c000 08:01 5507895                    /home/neethu/Intern/Tools/android-studio/plugins/gradle/lib/gradle-messaging-2.5.jar
+7f34d6bbb000-7f34d6bbc000 r--s 00005000 08:01 5507881                    /home/neethu/Intern/Tools/android-studio/plugins/gradle/lib/native-platform-windows-amd64-0.10.jar
+7f34d6bbc000-7f34d6bbd000 r--s 00003000 08:01 5507883                    /home/neethu/Intern/Tools/android-studio/plugins/gradle/lib/native-platform-linux-i386-0.10.jar
+7f34d6bbd000-7f34d6bbe000 r--s 00002000 08:01 5507893                    /home/neethu/Intern/Tools/android-studio/plugins/gradle/lib/native-platform-osx-i386-0.10.jar
+7f34d6bbe000-7f34d6bbf000 r--s 00004000 08:01 5507885                    /home/neethu/Intern/Tools/android-studio/plugins/gradle/lib/resources_en.jar
+7f34d6bbf000-7f34d6bc3000 r--s 000e4000 08:01 5507882                    /home/neethu/Intern/Tools/android-studio/plugins/gradle/lib/jna-3.2.7.jar
+7f34d6bc3000-7f34d6bc6000 r--s 00006000 08:01 5507891                    /home/neethu/Intern/Tools/android-studio/plugins/gradle/lib/jsr305-1.3.9.jar
+7f34d6bc6000-7f34d6bc9000 r--s 00018000 08:01 5507908                    /home/neethu/Intern/Tools/android-studio/plugins/gradle/lib/commons-io-1.4.jar
+7f34d6bc9000-7f34d6bca000 r--s 00000000 08:01 5507903                    /home/neethu/Intern/Tools/android-studio/plugins/gradle/lib/minlog-1.2.jar
+7f34d6bca000-7f34d6bd6000 r--s 00145000 08:01 5507913                    /home/neethu/Intern/Tools/android-studio/plugins/gradle/lib/gradle.jar
+7f34d6bd6000-7f34d6bd8000 r--s 00016000 08:01 5507894                    /home/neethu/Intern/Tools/android-studio/plugins/gradle/lib/gradle-jps-plugin.jar
+7f34d6bd8000-7f34d6bd9000 r--s 00003000 08:01 5507896                    /home/neethu/Intern/Tools/android-studio/plugins/gradle/lib/reflectasm-1.07.jar
+7f34d6bd9000-7f34d6c0f000 r--s 001b1000 08:01 5507892                    /home/neethu/Intern/Tools/android-studio/plugins/gradle/lib/gradle-core-2.5.jar
+7f34d6c0f000-7f34d6c12000 r--s 00026000 08:01 5507901                    /home/neethu/Intern/Tools/android-studio/plugins/gradle/lib/gradle-tooling-extension-impl.jar
+7f34d6c12000-7f34d6c13000 r--s 00003000 08:01 5507889                    /home/neethu/Intern/Tools/android-studio/plugins/gradle/lib/native-platform-linux-amd64-0.10.jar
+7f34d6c13000-7f34d6c14000 r--s 00002000 08:01 5507911                    /home/neethu/Intern/Tools/android-studio/plugins/gradle/lib/native-platform-osx-amd64-0.10.jar
+7f34d6c14000-7f34d6c1d000 r--s 00050000 08:01 5507905                    /home/neethu/Intern/Tools/android-studio/plugins/gradle/lib/gradle-model-core-2.5.jar
+7f34d6c1d000-7f34d6c1e000 r--s 00003000 08:01 5507907                    /home/neethu/Intern/Tools/android-studio/plugins/gradle/lib/native-platform-freebsd-amd64-0.10.jar
+7f34d6c1e000-7f34d6c20000 r--s 0000d000 08:01 5507912                    /home/neethu/Intern/Tools/android-studio/plugins/gradle/lib/gradle-tooling-extension-api.jar
+7f34d6c20000-7f34d6c22000 r--s 00005000 08:01 5507886                    /home/neethu/Intern/Tools/android-studio/plugins/gradle/lib/gradle-wrapper-2.5.jar
+7f34d6c22000-7f34d6c23000 r--s 00003000 08:01 5507897                    /home/neethu/Intern/Tools/android-studio/plugins/gradle/lib/native-platform-freebsd-i386-0.10.jar
+7f34d6c23000-7f34d6c24000 r--s 00005000 08:01 5507900                    /home/neethu/Intern/Tools/android-studio/plugins/gradle/lib/native-platform-windows-i386-0.10.jar
+7f34d6c24000-7f34d6c2f000 r--s 00036000 08:01 5507906                    /home/neethu/Intern/Tools/android-studio/plugins/gradle/lib/gradle-tooling-api-2.5.jar
+7f34d6c2f000-7f34d6c57000 r--s 001cf000 08:01 5507890                    /home/neethu/Intern/Tools/android-studio/plugins/gradle/lib/guava-jdk5-17.0.jar
+7f34d6c57000-7f34d6c59000 r--s 00007000 08:01 5507902                    /home/neethu/Intern/Tools/android-studio/plugins/gradle/lib/objenesis-1.2.jar
+7f34d6c59000-7f34d6c5a000 r--s 00006000 08:01 5507899                    /home/neethu/Intern/Tools/android-studio/plugins/gradle/lib/gradle-base-services-groovy-2.5.jar
+7f34d6c5a000-7f34d6c5c000 r--s 00005000 08:01 5507888                    /home/neethu/Intern/Tools/android-studio/plugins/gradle/lib/gradle-cli-2.5.jar
+7f34d6c5c000-7f34d6c64000 r--s 000bd000 08:01 5637246                    /home/neethu/Intern/Tools/android-studio/plugins/github/lib/github.jar
+7f34d6c64000-7f34d6c66000 r--s 0000d000 08:01 5508076                    /home/neethu/Intern/Tools/android-studio/plugins/IntelliLang/lib/intellilang-jps-plugin.jar
+7f34d6c66000-7f34d6c70000 r--s 00117000 08:01 5508077                    /home/neethu/Intern/Tools/android-studio/plugins/IntelliLang/lib/IntelliLang.jar
+7f34d6c70000-7f34d6c72000 r--s 0000f000 08:01 3410688                    /home/neethu/Intern/Tools/android-studio/plugins/editorconfig/lib/editorconfig.jar
+7f34d6c72000-7f34d6c73000 r--s 00004000 08:01 3410689                    /home/neethu/Intern/Tools/android-studio/plugins/editorconfig/lib/editorconfig-core-java.jar
+7f34d6c73000-7f34d6c74000 r--s 00002000 08:01 3282375                    /home/neethu/Intern/Tools/android-studio/plugins/hg4idea/lib/resources_en.jar
+7f34d6c74000-7f34d6c7e000 r--s 0014c000 08:01 3282376                    /home/neethu/Intern/Tools/android-studio/plugins/hg4idea/lib/hg4idea.jar
+7f34d6c7e000-7f34d6c8b000 r--s 0017f000 08:01 3542234                    /home/neethu/Intern/Tools/android-studio/plugins/tasks/lib/tasks-core.jar
+7f34d6c8b000-7f34d6c8d000 r--s 0000b000 08:01 3542231                    /home/neethu/Intern/Tools/android-studio/plugins/tasks/lib/json-smart-1.1.1.jar
+7f34d6c8d000-7f34d6c8f000 r--s 00016000 08:01 3542233                    /home/neethu/Intern/Tools/android-studio/plugins/tasks/lib/tasks-api.jar
+7f34d6c8f000-7f34d6c94000 r--s 0004a000 08:01 3542228                    /home/neethu/Intern/Tools/android-studio/plugins/tasks/lib/jira.jar
+7f34d6c94000-7f34d6c98000 r--s 00018000 08:01 3542227                    /home/neethu/Intern/Tools/android-studio/plugins/tasks/lib/wsdl4j-1.4.jar
+7f34d6c98000-7f34d6cac000 r--s 00173000 08:01 3542223                    /home/neethu/Intern/Tools/android-studio/plugins/tasks/lib/axis-1.4.jar
+7f34d6cac000-7f34d6caf000 r--s 00010000 08:01 3542230                    /home/neethu/Intern/Tools/android-studio/plugins/tasks/lib/commons-discovery-0.4.jar
+7f34d6caf000-7f34d6ce3000 r--s 003ba000 08:01 5507855                    /home/neethu/Intern/Tools/android-studio/plugins/svn4idea/lib/svnkit.jar
+7f34d6ce3000-7f34d6d0d000 r--s 004e4000 08:01 5507857                    /home/neethu/Intern/Tools/android-studio/plugins/svn4idea/lib/svn4idea.jar
+7f34d6d0d000-7f34d6d10000 ---p 00000000 00:00 0 
+7f34d6d10000-7f34d700e000 rw-p 00000000 00:00 0 
+7f34d700e000-7f34d7025000 r-xp 00000000 08:01 3282331                    /home/neethu/.AndroidStudio1.5/system/tmp/jna--1049361357/jna6564906275346142125.tmp (deleted)
+7f34d7025000-7f34d7124000 ---p 00017000 08:01 3282331                    /home/neethu/.AndroidStudio1.5/system/tmp/jna--1049361357/jna6564906275346142125.tmp (deleted)
+7f34d7124000-7f34d7126000 rw-p 00016000 08:01 3282331                    /home/neethu/.AndroidStudio1.5/system/tmp/jna--1049361357/jna6564906275346142125.tmp (deleted)
+7f34d7126000-7f34d712e000 r-xp 00000000 08:01 5243920                    /home/neethu/Intern/Tools/jdk1.8.0_71/jre/lib/amd64/libmanagement.so
+7f34d712e000-7f34d732e000 ---p 00008000 08:01 5243920                    /home/neethu/Intern/Tools/jdk1.8.0_71/jre/lib/amd64/libmanagement.so
+7f34d732e000-7f34d732f000 rw-p 00008000 08:01 5243920                    /home/neethu/Intern/Tools/jdk1.8.0_71/jre/lib/amd64/libmanagement.so
+7f34d732f000-7f34d752f000 rw-p 00000000 00:00 0 
+7f34d752f000-7f34d7532000 ---p 00000000 00:00 0 
+7f34d7532000-7f34d7830000 rw-p 00000000 00:00 0                          [stack:13089]
+7f34d7830000-7f34d7831000 ---p 00000000 00:00 0 
+7f34d7831000-7f34d8031000 rw-p 00000000 00:00 0 
+7f34d8031000-7f34d8032000 ---p 00000000 00:00 0 
+7f34d8032000-7f34d8832000 rw-p 00000000 00:00 0 
+7f34d8832000-7f34d8833000 ---p 00000000 00:00 0 
+7f34d8833000-7f34d9033000 rw-p 00000000 00:00 0                          [stack:13076]
+7f34d9033000-7f34d9077000 r-xp 00000000 08:01 4460664                    /lib/x86_64-linux-gnu/libdbus-1.so.3.7.6
+7f34d9077000-7f34d9276000 ---p 00044000 08:01 4460664                    /lib/x86_64-linux-gnu/libdbus-1.so.3.7.6
+7f34d9276000-7f34d9277000 r--p 00043000 08:01 4460664                    /lib/x86_64-linux-gnu/libdbus-1.so.3.7.6
+7f34d9277000-7f34d9278000 rw-p 00044000 08:01 4460664                    /lib/x86_64-linux-gnu/libdbus-1.so.3.7.6
+7f34d9278000-7f34d9280000 r-xp 00000000 08:01 4460712                    /lib/x86_64-linux-gnu/libnih-dbus.so.1.0.0
+7f34d9280000-7f34d9480000 ---p 00008000 08:01 4460712                    /lib/x86_64-linux-gnu/libnih-dbus.so.1.0.0
+7f34d9480000-7f34d9481000 r--p 00008000 08:01 4460712                    /lib/x86_64-linux-gnu/libnih-dbus.so.1.0.0
+7f34d9481000-7f34d9482000 rw-p 00009000 08:01 4460712                    /lib/x86_64-linux-gnu/libnih-dbus.so.1.0.0
+7f34d9482000-7f34d9499000 r-xp 00000000 08:01 4460714                    /lib/x86_64-linux-gnu/libnih.so.1.0.0
+7f34d9499000-7f34d9698000 ---p 00017000 08:01 4460714                    /lib/x86_64-linux-gnu/libnih.so.1.0.0
+7f34d9698000-7f34d9699000 r--p 00016000 08:01 4460714                    /lib/x86_64-linux-gnu/libnih.so.1.0.0
+7f34d9699000-7f34d969a000 rw-p 00017000 08:01 4460714                    /lib/x86_64-linux-gnu/libnih.so.1.0.0
+7f34d969a000-7f34d96b3000 r-xp 00000000 08:01 4456552                    /lib/x86_64-linux-gnu/libcgmanager.so.0.0.0
+7f34d96b3000-7f34d98b2000 ---p 00019000 08:01 4456552                    /lib/x86_64-linux-gnu/libcgmanager.so.0.0.0
+7f34d98b2000-7f34d98b4000 r--p 00018000 08:01 4456552                    /lib/x86_64-linux-gnu/libcgmanager.so.0.0.0
+7f34d98b4000-7f34d98b5000 rw-p 0001a000 08:01 4456552                    /lib/x86_64-linux-gnu/libcgmanager.so.0.0.0
+7f34d98b5000-7f34d98c5000 r-xp 00000000 08:01 4460587                    /lib/x86_64-linux-gnu/libudev.so.1.3.5
+7f34d98c5000-7f34d9ac4000 ---p 00010000 08:01 4460587                    /lib/x86_64-linux-gnu/libudev.so.1.3.5
+7f34d9ac4000-7f34d9ac5000 r--p 0000f000 08:01 4460587                    /lib/x86_64-linux-gnu/libudev.so.1.3.5
+7f34d9ac5000-7f34d9ac6000 rw-p 00010000 08:01 4460587                    /lib/x86_64-linux-gnu/libudev.so.1.3.5
+7f34d9ac6000-7f34d9afa000 r-xp 00000000 08:01 1705168                    /usr/lib/x86_64-linux-gnu/gvfs/libgvfscommon.so
+7f34d9afa000-7f34d9cfa000 ---p 00034000 08:01 1705168                    /usr/lib/x86_64-linux-gnu/gvfs/libgvfscommon.so
+7f34d9cfa000-7f34d9cff000 r--p 00034000 08:01 1705168                    /usr/lib/x86_64-linux-gnu/gvfs/libgvfscommon.so
+7f34d9cff000-7f34d9d00000 rw-p 00039000 08:01 1705168                    /usr/lib/x86_64-linux-gnu/gvfs/libgvfscommon.so
+7f34d9d00000-7f34d9d2f000 r-xp 00000000 08:01 1705169                    /usr/lib/x86_64-linux-gnu/gio/modules/libgvfsdbus.so
+7f34d9d2f000-7f34d9f2f000 ---p 0002f000 08:01 1705169                    /usr/lib/x86_64-linux-gnu/gio/modules/libgvfsdbus.so
+7f34d9f2f000-7f34d9f30000 r--p 0002f000 08:01 1705169                    /usr/lib/x86_64-linux-gnu/gio/modules/libgvfsdbus.so
+7f34d9f30000-7f34d9f31000 rw-p 00030000 08:01 1705169                    /usr/lib/x86_64-linux-gnu/gio/modules/libgvfsdbus.so
+7f34d9f31000-7f34d9f32000 rw-p 00000000 00:00 0 
+7f34d9f32000-7f34d9f8b000 r-xp 00000000 08:01 1319119                    /usr/lib/x86_64-linux-gnu/libibus-1.0.so.5.0.505
+7f34d9f8b000-7f34da18b000 ---p 00059000 08:01 1319119                    /usr/lib/x86_64-linux-gnu/libibus-1.0.so.5.0.505
+7f34da18b000-7f34da18d000 r--p 00059000 08:01 1319119                    /usr/lib/x86_64-linux-gnu/libibus-1.0.so.5.0.505
+7f34da18d000-7f34da18e000 rw-p 0005b000 08:01 1319119                    /usr/lib/x86_64-linux-gnu/libibus-1.0.so.5.0.505
+7f34da18e000-7f34da18f000 rw-p 00000000 00:00 0 
+7f34da18f000-7f34da195000 r-xp 00000000 08:01 1705267                    /usr/lib/x86_64-linux-gnu/gtk-2.0/2.10.0/immodules/im-ibus.so
+7f34da195000-7f34da395000 ---p 00006000 08:01 1705267                    /usr/lib/x86_64-linux-gnu/gtk-2.0/2.10.0/immodules/im-ibus.so
+7f34da395000-7f34da396000 r--p 00006000 08:01 1705267                    /usr/lib/x86_64-linux-gnu/gtk-2.0/2.10.0/immodules/im-ibus.so
+7f34da396000-7f34da397000 rw-p 00007000 08:01 1705267                    /usr/lib/x86_64-linux-gnu/gtk-2.0/2.10.0/immodules/im-ibus.so
+7f34da397000-7f34da398000 ---p 00000000 00:00 0 
+7f34da398000-7f34dab98000 rw-p 00000000 00:00 0                          [stack:13069]
+7f34dab98000-7f34dab99000 ---p 00000000 00:00 0 
+7f34dab99000-7f34db399000 rw-p 00000000 00:00 0                          [stack:13068]
+7f34db399000-7f34db3a4000 r-xp 00000000 08:01 1705026                    /usr/lib/x86_64-linux-gnu/gio/modules/libdconfsettings.so
+7f34db3a4000-7f34db5a4000 ---p 0000b000 08:01 1705026                    /usr/lib/x86_64-linux-gnu/gio/modules/libdconfsettings.so
+7f34db5a4000-7f34db5a5000 r--p 0000b000 08:01 1705026                    /usr/lib/x86_64-linux-gnu/gio/modules/libdconfsettings.so
+7f34db5a5000-7f34db5a6000 rw-p 0000c000 08:01 1705026                    /usr/lib/x86_64-linux-gnu/gio/modules/libdconfsettings.so
+7f34db5a6000-7f34db5ad000 r-xp 00000000 08:01 1319282                    /usr/lib/x86_64-linux-gnu/libogg.so.0.8.1
+7f34db5ad000-7f34db7ad000 ---p 00007000 08:01 1319282                    /usr/lib/x86_64-linux-gnu/libogg.so.0.8.1
+7f34db7ad000-7f34db7ae000 r--p 00007000 08:01 1319282                    /usr/lib/x86_64-linux-gnu/libogg.so.0.8.1
+7f34db7ae000-7f34db7af000 rw-p 00008000 08:01 1319282                    /usr/lib/x86_64-linux-gnu/libogg.so.0.8.1
+7f34db7af000-7f34db7db000 r-xp 00000000 08:01 1319556                    /usr/lib/x86_64-linux-gnu/libvorbis.so.0.4.5
+7f34db7db000-7f34db9da000 ---p 0002c000 08:01 1319556                    /usr/lib/x86_64-linux-gnu/libvorbis.so.0.4.5
+7f34db9da000-7f34db9db000 r--p 0002b000 08:01 1319556                    /usr/lib/x86_64-linux-gnu/libvorbis.so.0.4.5
+7f34db9db000-7f34db9dc000 rw-p 0002c000 08:01 1319556                    /usr/lib/x86_64-linux-gnu/libvorbis.so.0.4.5
+7f34db9dc000-7f34db9e5000 r-xp 00000000 08:01 1319188                    /usr/lib/x86_64-linux-gnu/libltdl.so.7.3.0
+7f34db9e5000-7f34dbbe4000 ---p 00009000 08:01 1319188                    /usr/lib/x86_64-linux-gnu/libltdl.so.7.3.0
+7f34dbbe4000-7f34dbbe5000 r--p 00008000 08:01 1319188                    /usr/lib/x86_64-linux-gnu/libltdl.so.7.3.0
+7f34dbbe5000-7f34dbbe6000 rw-p 00009000 08:01 1319188                    /usr/lib/x86_64-linux-gnu/libltdl.so.7.3.0
+7f34dbbe6000-7f34dbbf7000 r-xp 00000000 08:01 1319477                    /usr/lib/x86_64-linux-gnu/libtdb.so.1.2.12
+7f34dbbf7000-7f34dbdf6000 ---p 00011000 08:01 1319477                    /usr/lib/x86_64-linux-gnu/libtdb.so.1.2.12
+7f34dbdf6000-7f34dbdf7000 r--p 00010000 08:01 1319477                    /usr/lib/x86_64-linux-gnu/libtdb.so.1.2.12
+7f34dbdf7000-7f34dbdf8000 rw-p 00011000 08:01 1319477                    /usr/lib/x86_64-linux-gnu/libtdb.so.1.2.12
+7f34dbdf8000-7f34dbdff000 r-xp 00000000 08:01 1319560                    /usr/lib/x86_64-linux-gnu/libvorbisfile.so.3.3.4
+7f34dbdff000-7f34dbffe000 ---p 00007000 08:01 1319560                    /usr/lib/x86_64-linux-gnu/libvorbisfile.so.3.3.4
+7f34dbffe000-7f34dbfff000 r--p 00006000 08:01 1319560                    /usr/lib/x86_64-linux-gnu/libvorbisfile.so.3.3.4
+7f34dbfff000-7f34dc000000 rw-p 00007000 08:01 1319560                    /usr/lib/x86_64-linux-gnu/libvorbisfile.so.3.3.4
+7f34dc000000-7f34dc03f000 rw-p 00000000 00:00 0 
+7f34dc03f000-7f34e0000000 ---p 00000000 00:00 0 
+7f34e0000000-7f34e0001000 r--s 00004000 08:01 3542229                    /home/neethu/Intern/Tools/android-studio/plugins/tasks/lib/axis-saaj-1.3.jar
+7f34e0001000-7f34e0003000 r--s 0000c000 08:01 3542235                    /home/neethu/Intern/Tools/android-studio/plugins/tasks/lib/json-path-0.8.0.jar
+7f34e0003000-7f34e0005000 r--s 00006000 08:01 3542226                    /home/neethu/Intern/Tools/android-studio/plugins/tasks/lib/axis-jaxrpc-1.4.jar
+7f34e0005000-7f34e0012000 r--s 0012c000 08:01 5508070                    /home/neethu/Intern/Tools/android-studio/plugins/properties/lib/properties.jar
+7f34e0012000-7f34e001d000 r--s 00071000 08:01 5507854                    /home/neethu/Intern/Tools/android-studio/plugins/svn4idea/lib/trileadsrc.zip
+7f34e001d000-7f34e0020000 ---p 00000000 00:00 0 
+7f34e0020000-7f34e0056000 rw-p 00000000 00:00 0                          [stack:13085]
+7f34e0056000-7f34e0059000 ---p 00000000 00:00 0 
+7f34e0059000-7f34e0157000 rw-p 00000000 00:00 0                          [stack:13097]
+7f34e0157000-7f34e0166000 r-xp 00000000 08:01 1318702                    /usr/lib/x86_64-linux-gnu/libcanberra.so.0.2.5
+7f34e0166000-7f34e0365000 ---p 0000f000 08:01 1318702                    /usr/lib/x86_64-linux-gnu/libcanberra.so.0.2.5
+7f34e0365000-7f34e0366000 r--p 0000e000 08:01 1318702                    /usr/lib/x86_64-linux-gnu/libcanberra.so.0.2.5
+7f34e0366000-7f34e0367000 rw-p 0000f000 08:01 1318702                    /usr/lib/x86_64-linux-gnu/libcanberra.so.0.2.5
+7f34e0367000-7f34e036b000 r-xp 00000000 08:01 1318698                    /usr/lib/x86_64-linux-gnu/libcanberra-gtk.so.0.1.9
+7f34e036b000-7f34e056a000 ---p 00004000 08:01 1318698                    /usr/lib/x86_64-linux-gnu/libcanberra-gtk.so.0.1.9
+7f34e056a000-7f34e056b000 r--p 00003000 08:01 1318698                    /usr/lib/x86_64-linux-gnu/libcanberra-gtk.so.0.1.9
+7f34e056b000-7f34e056c000 rw-p 00004000 08:01 1318698                    /usr/lib/x86_64-linux-gnu/libcanberra-gtk.so.0.1.9
+7f34e056c000-7f34e0571000 r-xp 00000000 08:01 1705281                    /usr/lib/x86_64-linux-gnu/gtk-2.0/modules/libcanberra-gtk-module.so
+7f34e0571000-7f34e0770000 ---p 00005000 08:01 1705281                    /usr/lib/x86_64-linux-gnu/gtk-2.0/modules/libcanberra-gtk-module.so
+7f34e0770000-7f34e0771000 r--p 00004000 08:01 1705281                    /usr/lib/x86_64-linux-gnu/gtk-2.0/modules/libcanberra-gtk-module.so
+7f34e0771000-7f34e0772000 rw-p 00005000 08:01 1705281                    /usr/lib/x86_64-linux-gnu/gtk-2.0/modules/libcanberra-gtk-module.so
+7f34e0772000-7f34e07a1000 r-xp 00000000 08:01 1705263                    /usr/lib/x86_64-linux-gnu/gtk-2.0/2.10.0/engines/libmurrine.so
+7f34e07a1000-7f34e09a1000 ---p 0002f000 08:01 1705263                    /usr/lib/x86_64-linux-gnu/gtk-2.0/2.10.0/engines/libmurrine.so
+7f34e09a1000-7f34e09a2000 r--p 0002f000 08:01 1705263                    /usr/lib/x86_64-linux-gnu/gtk-2.0/2.10.0/engines/libmurrine.so
+7f34e09a2000-7f34e09a3000 rw-p 00030000 08:01 1705263                    /usr/lib/x86_64-linux-gnu/gtk-2.0/2.10.0/engines/libmurrine.so
+7f34e09a3000-7f34e09b3000 r-xp 00000000 08:01 1319526                    /usr/lib/x86_64-linux-gnu/libunity-gtk2-parser.so.0.0.0
+7f34e09b3000-7f34e0bb2000 ---p 00010000 08:01 1319526                    /usr/lib/x86_64-linux-gnu/libunity-gtk2-parser.so.0.0.0
+7f34e0bb2000-7f34e0bb3000 r--p 0000f000 08:01 1319526                    /usr/lib/x86_64-linux-gnu/libunity-gtk2-parser.so.0.0.0
+7f34e0bb3000-7f34e0bb4000 rw-p 00010000 08:01 1319526                    /usr/lib/x86_64-linux-gnu/libunity-gtk2-parser.so.0.0.0
+7f34e0bb4000-7f34e0bb9000 r-xp 00000000 08:01 1705285                    /usr/lib/x86_64-linux-gnu/gtk-2.0/modules/libunity-gtk-module.so
+7f34e0bb9000-7f34e0db8000 ---p 00005000 08:01 1705285                    /usr/lib/x86_64-linux-gnu/gtk-2.0/modules/libunity-gtk-module.so
+7f34e0db8000-7f34e0db9000 r--p 00004000 08:01 1705285                    /usr/lib/x86_64-linux-gnu/gtk-2.0/modules/libunity-gtk-module.so
+7f34e0db9000-7f34e0dba000 rw-p 00005000 08:01 1705285                    /usr/lib/x86_64-linux-gnu/gtk-2.0/modules/libunity-gtk-module.so
+7f34e0dba000-7f34e0dcb000 r-xp 00000000 08:01 1705284                    /usr/lib/x86_64-linux-gnu/gtk-2.0/modules/liboverlay-scrollbar.so
+7f34e0dcb000-7f34e0fca000 ---p 00011000 08:01 1705284                    /usr/lib/x86_64-linux-gnu/gtk-2.0/modules/liboverlay-scrollbar.so
+7f34e0fca000-7f34e0fcb000 r--p 00010000 08:01 1705284                    /usr/lib/x86_64-linux-gnu/gtk-2.0/modules/liboverlay-scrollbar.so
+7f34e0fcb000-7f34e0fcc000 rw-p 00011000 08:01 1705284                    /usr/lib/x86_64-linux-gnu/gtk-2.0/modules/liboverlay-scrollbar.so
+7f34e0fcc000-7f34e0fcd000 r-xp 00000000 08:01 1319081                    /usr/lib/x86_64-linux-gnu/libgthread-2.0.so.0.4002.0
+7f34e0fcd000-7f34e11cc000 ---p 00001000 08:01 1319081                    /usr/lib/x86_64-linux-gnu/libgthread-2.0.so.0.4002.0
+7f34e11cc000-7f34e11cd000 r--p 00000000 08:01 1319081                    /usr/lib/x86_64-linux-gnu/libgthread-2.0.so.0.4002.0
+7f34e11cd000-7f34e11ce000 rw-p 00001000 08:01 1319081                    /usr/lib/x86_64-linux-gnu/libgthread-2.0.so.0.4002.0
+7f34e11ce000-7f34e11d4000 r-xp 00000000 08:01 1318766                    /usr/lib/x86_64-linux-gnu/libdatrie.so.1.3.1
+7f34e11d4000-7f34e13d3000 ---p 00006000 08:01 1318766                    /usr/lib/x86_64-linux-gnu/libdatrie.so.1.3.1
+7f34e13d3000-7f34e13d4000 r--p 00005000 08:01 1318766                    /usr/lib/x86_64-linux-gnu/libdatrie.so.1.3.1
+7f34e13d4000-7f34e13d5000 rw-p 00006000 08:01 1318766                    /usr/lib/x86_64-linux-gnu/libdatrie.so.1.3.1
+7f34e13d5000-7f34e13ef000 r-xp 00000000 08:01 1318992                    /usr/lib/x86_64-linux-gnu/libgraphite2.so.3.0.1
+7f34e13ef000-7f34e15ee000 ---p 0001a000 08:01 1318992                    /usr/lib/x86_64-linux-gnu/libgraphite2.so.3.0.1
+7f34e15ee000-7f34e15f0000 r--p 00019000 08:01 1318992                    /usr/lib/x86_64-linux-gnu/libgraphite2.so.3.0.1
+7f34e15f0000-7f34e15f1000 rw-p 0001b000 08:01 1318992                    /usr/lib/x86_64-linux-gnu/libgraphite2.so.3.0.1
+7f34e15f1000-7f34e162e000 r-xp 00000000 08:01 4460753                    /lib/x86_64-linux-gnu/libpcre.so.3.13.1
+7f34e162e000-7f34e182d000 ---p 0003d000 08:01 4460753                    /lib/x86_64-linux-gnu/libpcre.so.3.13.1
+7f34e182d000-7f34e182e000 r--p 0003c000 08:01 4460753                    /lib/x86_64-linux-gnu/libpcre.so.3.13.1
+7f34e182e000-7f34e182f000 rw-p 0003d000 08:01 4460753                    /lib/x86_64-linux-gnu/libpcre.so.3.13.1
+7f34e182f000-7f34e1836000 r-xp 00000000 08:01 1311260                    /usr/lib/x86_64-linux-gnu/libffi.so.6.0.1
+7f34e1836000-7f34e1a35000 ---p 00007000 08:01 1311260                    /usr/lib/x86_64-linux-gnu/libffi.so.6.0.1
+7f34e1a35000-7f34e1a36000 r--p 00006000 08:01 1311260                    /usr/lib/x86_64-linux-gnu/libffi.so.6.0.1
+7f34e1a36000-7f34e1a37000 rw-p 00007000 08:01 1311260                    /usr/lib/x86_64-linux-gnu/libffi.so.6.0.1
+7f34e1a37000-7f34e1a5e000 r-xp 00000000 08:01 4456546                    /lib/x86_64-linux-gnu/libexpat.so.1.6.0
+7f34e1a5e000-7f34e1c5e000 ---p 00027000 08:01 4456546                    /lib/x86_64-linux-gnu/libexpat.so.1.6.0
+7f34e1c5e000-7f34e1c60000 r--p 00027000 08:01 4456546                    /lib/x86_64-linux-gnu/libexpat.so.1.6.0
+7f34e1c60000-7f34e1c61000 rw-p 00029000 08:01 4456546                    /lib/x86_64-linux-gnu/libexpat.so.1.6.0
+7f34e1c61000-7f34e1c69000 r-xp 00000000 08:01 1319489                    /usr/lib/x86_64-linux-gnu/libthai.so.0.2.0
+7f34e1c69000-7f34e1e68000 ---p 00008000 08:01 1319489                    /usr/lib/x86_64-linux-gnu/libthai.so.0.2.0
+7f34e1e68000-7f34e1e69000 r--p 00007000 08:01 1319489                    /usr/lib/x86_64-linux-gnu/libthai.so.0.2.0
+7f34e1e69000-7f34e1e6a000 rw-p 00008000 08:01 1319489                    /usr/lib/x86_64-linux-gnu/libthai.so.0.2.0
+7f34e1e6a000-7f34e1ebd000 r-xp 00000000 08:01 1319105                    /usr/lib/x86_64-linux-gnu/libharfbuzz.so.0.927.0
+7f34e1ebd000-7f34e20bd000 ---p 00053000 08:01 1319105                    /usr/lib/x86_64-linux-gnu/libharfbuzz.so.0.927.0
+7f34e20bd000-7f34e20be000 r--p 00053000 08:01 1319105                    /usr/lib/x86_64-linux-gnu/libharfbuzz.so.0.927.0
+7f34e20be000-7f34e20bf000 rw-p 00054000 08:01 1319105                    /usr/lib/x86_64-linux-gnu/libharfbuzz.so.0.927.0
+7f34e20bf000-7f34e20d6000 r-xp 00000000 08:01 4460776                    /lib/x86_64-linux-gnu/libresolv-2.19.so
+7f34e20d6000-7f34e22d6000 ---p 00017000 08:01 4460776                    /lib/x86_64-linux-gnu/libresolv-2.19.so
+7f34e22d6000-7f34e22d7000 r--p 00017000 08:01 4460776                    /lib/x86_64-linux-gnu/libresolv-2.19.so
+7f34e22d7000-7f34e22d8000 rw-p 00018000 08:01 4460776                    /lib/x86_64-linux-gnu/libresolv-2.19.so
+7f34e22d8000-7f34e22da000 rw-p 00000000 00:00 0 
+7f34e22da000-7f34e22fa000 r-xp 00000000 08:01 4460780                    /lib/x86_64-linux-gnu/libselinux.so.1
+7f34e22fa000-7f34e24f9000 ---p 00020000 08:01 4460780                    /lib/x86_64-linux-gnu/libselinux.so.1
+7f34e24f9000-7f34e24fa000 r--p 0001f000 08:01 4460780                    /lib/x86_64-linux-gnu/libselinux.so.1
+7f34e24fa000-7f34e24fb000 rw-p 00020000 08:01 4460780                    /lib/x86_64-linux-gnu/libselinux.so.1
+7f34e24fb000-7f34e24fd000 rw-p 00000000 00:00 0 
+7f34e24fd000-7f34e2515000 r-xp 00000000 08:01 4460813                    /lib/x86_64-linux-gnu/libz.so.1.2.8
+7f34e2515000-7f34e2714000 ---p 00018000 08:01 4460813                    /lib/x86_64-linux-gnu/libz.so.1.2.8
+7f34e2714000-7f34e2715000 r--p 00017000 08:01 4460813                    /lib/x86_64-linux-gnu/libz.so.1.2.8
+7f34e2715000-7f34e2716000 rw-p 00018000 08:01 4460813                    /lib/x86_64-linux-gnu/libz.so.1.2.8
+7f34e2716000-7f34e271e000 r-xp 00000000 08:01 1319615                    /usr/lib/x86_64-linux-gnu/libxcb-render.so.0.0.0
+7f34e271e000-7f34e291d000 ---p 00008000 08:01 1319615                    /usr/lib/x86_64-linux-gnu/libxcb-render.so.0.0.0
+7f34e291d000-7f34e291e000 r--p 00007000 08:01 1319615                    /usr/lib/x86_64-linux-gnu/libxcb-render.so.0.0.0
+7f34e291e000-7f34e291f000 rw-p 00008000 08:01 1319615                    /usr/lib/x86_64-linux-gnu/libxcb-render.so.0.0.0
+7f34e291f000-7f34e2921000 r-xp 00000000 08:01 1319619                    /usr/lib/x86_64-linux-gnu/libxcb-shm.so.0.0.0
+7f34e2921000-7f34e2b20000 ---p 00002000 08:01 1319619                    /usr/lib/x86_64-linux-gnu/libxcb-shm.so.0.0.0
+7f34e2b20000-7f34e2b21000 r--p 00001000 08:01 1319619                    /usr/lib/x86_64-linux-gnu/libxcb-shm.so.0.0.0
+7f34e2b21000-7f34e2b22000 rw-p 00002000 08:01 1319619                    /usr/lib/x86_64-linux-gnu/libxcb-shm.so.0.0.0
+7f34e2b22000-7f34e2b47000 r-xp 00000000 08:01 4456550                    /lib/x86_64-linux-gnu/libpng12.so.0.50.0
+7f34e2b47000-7f34e2d46000 ---p 00025000 08:01 4456550                    /lib/x86_64-linux-gnu/libpng12.so.0.50.0
+7f34e2d46000-7f34e2d47000 r--p 00024000 08:01 4456550                    /lib/x86_64-linux-gnu/libpng12.so.0.50.0
+7f34e2d47000-7f34e2d48000 rw-p 00025000 08:01 4456550                    /lib/x86_64-linux-gnu/libpng12.so.0.50.0
+7f34e2d48000-7f34e2de9000 r-xp 00000000 08:01 1319321                    /usr/lib/x86_64-linux-gnu/libpixman-1.so.0.30.2
+7f34e2de9000-7f34e2fe9000 ---p 000a1000 08:01 1319321                    /usr/lib/x86_64-linux-gnu/libpixman-1.so.0.30.2
+7f34e2fe9000-7f34e2ff0000 r--p 000a1000 08:01 1319321                    /usr/lib/x86_64-linux-gnu/libpixman-1.so.0.30.2
+7f34e2ff0000-7f34e2ff1000 rw-p 000a8000 08:01 1319321                    /usr/lib/x86_64-linux-gnu/libpixman-1.so.0.30.2
+7f34e2ff1000-7f34e308e000 r-xp 00000000 08:01 1318004                    /usr/lib/x86_64-linux-gnu/libfreetype.so.6.11.1
+7f34e308e000-7f34e328d000 ---p 0009d000 08:01 1318004                    /usr/lib/x86_64-linux-gnu/libfreetype.so.6.11.1
+7f34e328d000-7f34e3293000 r--p 0009c000 08:01 1318004                    /usr/lib/x86_64-linux-gnu/libfreetype.so.6.11.1
+7f34e3293000-7f34e3294000 rw-p 000a2000 08:01 1318004                    /usr/lib/x86_64-linux-gnu/libfreetype.so.6.11.1
+7f34e3294000-7f34e3296000 r-xp 00000000 08:01 1318572                    /usr/lib/x86_64-linux-gnu/libXdamage.so.1.1.0
+7f34e3296000-7f34e3495000 ---p 00002000 08:01 1318572                    /usr/lib/x86_64-linux-gnu/libXdamage.so.1.1.0
+7f34e3495000-7f34e3496000 r--p 00001000 08:01 1318572                    /usr/lib/x86_64-linux-gnu/libXdamage.so.1.1.0
+7f34e3496000-7f34e3497000 rw-p 00002000 08:01 1318572                    /usr/lib/x86_64-linux-gnu/libXdamage.so.1.1.0
+7f34e3497000-7f34e3499000 r-xp 00000000 08:01 1318568                    /usr/lib/x86_64-linux-gnu/libXcomposite.so.1.0.0
+7f34e3499000-7f34e3698000 ---p 00002000 08:01 1318568                    /usr/lib/x86_64-linux-gnu/libXcomposite.so.1.0.0
+7f34e3698000-7f34e3699000 r--p 00001000 08:01 1318568                    /usr/lib/x86_64-linux-gnu/libXcomposite.so.1.0.0
+7f34e3699000-7f34e369a000 rw-p 00002000 08:01 1318568                    /usr/lib/x86_64-linux-gnu/libXcomposite.so.1.0.0
+7f34e369a000-7f34e36a3000 r-xp 00000000 08:01 1318596                    /usr/lib/x86_64-linux-gnu/libXrandr.so.2.2.0
+7f34e36a3000-7f34e38a2000 ---p 00009000 08:01 1318596                    /usr/lib/x86_64-linux-gnu/libXrandr.so.2.2.0
+7f34e38a2000-7f34e38a3000 r--p 00008000 08:01 1318596                    /usr/lib/x86_64-linux-gnu/libXrandr.so.2.2.0
+7f34e38a3000-7f34e38a4000 rw-p 00009000 08:01 1318596                    /usr/lib/x86_64-linux-gnu/libXrandr.so.2.2.0
+7f34e38a4000-7f34e38a6000 r-xp 00000000 08:01 1318586                    /usr/lib/x86_64-linux-gnu/libXinerama.so.1.0.0
+7f34e38a6000-7f34e3aa5000 ---p 00002000 08:01 1318586                    /usr/lib/x86_64-linux-gnu/libXinerama.so.1.0.0
+7f34e3aa5000-7f34e3aa6000 r--p 00001000 08:01 1318586                    /usr/lib/x86_64-linux-gnu/libXinerama.so.1.0.0
+7f34e3aa6000-7f34e3aa7000 rw-p 00002000 08:01 1318586                    /usr/lib/x86_64-linux-gnu/libXinerama.so.1.0.0
+7f34e3aa7000-7f34e3bad000 r-xp 00000000 08:01 4460681                    /lib/x86_64-linux-gnu/libglib-2.0.so.0.4002.0
+7f34e3bad000-7f34e3dac000 ---p 00106000 08:01 4460681                    /lib/x86_64-linux-gnu/libglib-2.0.so.0.4002.0
+7f34e3dac000-7f34e3dad000 r--p 00105000 08:01 4460681                    /lib/x86_64-linux-gnu/libglib-2.0.so.0.4002.0
+7f34e3dad000-7f34e3dae000 rw-p 00106000 08:01 4460681                    /lib/x86_64-linux-gnu/libglib-2.0.so.0.4002.0
+7f34e3dae000-7f34e3daf000 rw-p 00000000 00:00 0 
+7f34e3daf000-7f34e3dfe000 r-xp 00000000 08:01 1318974                    /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0.4002.0
+7f34e3dfe000-7f34e3ffe000 ---p 0004f000 08:01 1318974                    /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0.4002.0
+7f34e3ffe000-7f34e3fff000 r--p 0004f000 08:01 1318974                    /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0.4002.0
+7f34e3fff000-7f34e4000000 rw-p 00050000 08:01 1318974                    /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0.4002.0
+7f34e4000000-7f34e4816000 rw-p 00000000 00:00 0 
+7f34e4816000-7f34e8000000 ---p 00000000 00:00 0 
+7f34e8000000-7f34e840e000 rw-p 00000000 00:00 0 
+7f34e840e000-7f34ec000000 ---p 00000000 00:00 0 
+7f34ec000000-7f34ec004000 r--s 0005a000 08:01 5508091                    /home/neethu/Intern/Tools/android-studio/plugins/copyright/lib/copyright.jar
+7f34ec004000-7f34ec008000 r--s 00025000 08:01 5507832                    /home/neethu/Intern/Tools/android-studio/plugins/svn4idea/lib/antlr.jar
+7f34ec008000-7f34ec00f000 r--s 00051000 08:01 5507830                    /home/neethu/Intern/Tools/android-studio/plugins/svn4idea/lib/svnkit-javahl.jar
+7f34ec00f000-7f34ec012000 r--s 0000f000 08:01 5507829                    /home/neethu/Intern/Tools/android-studio/plugins/svn4idea/lib/sequence-library.jar
+7f34ec012000-7f34ec013000 r--p 00000000 00:00 0 
+7f34ec013000-7f34ec065000 r--p 00000000 08:01 2360484                    /usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf
+7f34ec065000-7f34ec0bc000 r--p 00000000 08:01 2360647                    /usr/share/fonts/truetype/ubuntu-font-family/Ubuntu-R.ttf
+7f34ec0bc000-7f34ec0bd000 r--s 00000000 08:01 12451957                   /var/cache/fontconfig/c05880de57d1f5e948fdfacc138775d9-le64.cache-4
+7f34ec0bd000-7f34ec0c8000 r--s 00000000 08:01 12451951                   /var/cache/fontconfig/945677eb7aeaf62f1d50efc3fb3ec7d8-le64.cache-4
+7f34ec0c8000-7f34ec0ce000 r--s 00000000 08:01 12451937                   /var/cache/fontconfig/2cd17615ca594fa2959ae173292e504c-le64.cache-4
+7f34ec0ce000-7f34ec0cf000 r--s 00000000 08:01 12451967                   /var/cache/fontconfig/e7071f4a29fa870f4323321c154eba04-le64.cache-4
+7f34ec0cf000-7f34ec0d0000 r--s 00000000 08:01 12451934                   /var/cache/fontconfig/0d8c3b2ac0904cb8a57a757ad11a4a08-le64.cache-4
+7f34ec0d0000-7f34ec0d7000 r--s 00000000 08:01 12451954                   /var/cache/fontconfig/a755afe4a08bf5b97852ceb7400b47bc-le64.cache-4
+7f34ec0d7000-7f34ec0eb000 r--s 00000000 08:01 12451932                   /var/cache/fontconfig/04aabc0a78ac019cf9454389977116d2-le64.cache-4
+7f34ec0eb000-7f34ec0ec000 r--s 00000000 08:01 12451936                   /var/cache/fontconfig/1ac9eb803944fde146138c791f5cc56a-le64.cache-4
+7f34ec0ec000-7f34ec0f0000 r--s 00000000 08:01 12451940                   /var/cache/fontconfig/385c0604a188198f04d133e54aba7fe7-le64.cache-4
+7f34ec0f0000-7f34ec0f1000 r--s 00000000 08:01 12451964                   /var/cache/fontconfig/dc05db6664285cc2f12bf69c139ae4c3-le64.cache-4
+7f34ec0f1000-7f34ec0f3000 r--s 00000000 08:01 12451948                   /var/cache/fontconfig/767a8244fc0220cfb567a839d0392e0b-le64.cache-4
+7f34ec0f3000-7f34ec0f4000 r--s 00000000 08:01 12459668                   /var/cache/fontconfig/4794a0821666d79190d59a36cb4f44b5-le64.cache-4
+7f34ec0f4000-7f34ec0f9000 r--s 00000000 08:01 12451950                   /var/cache/fontconfig/8801497958630a81b71ace7c5f9b32a8-le64.cache-4
+7f34ec0f9000-7f34ec100000 r--s 00000000 08:01 12451938                   /var/cache/fontconfig/3047814df9a2f067bd2d96a2b9c36e5a-le64.cache-4
+7f34ec100000-7f34ec101000 r--s 00000000 08:01 12451944                   /var/cache/fontconfig/56cf4f4769d0f4abc89a4895d7bd3ae1-le64.cache-4
+7f34ec101000-7f34ec102000 r--s 00000000 08:01 12451956                   /var/cache/fontconfig/b9d506c9ac06c20b433354fa67a72993-le64.cache-4
+7f34ec102000-7f34ec108000 r--s 00000000 08:01 12451955                   /var/cache/fontconfig/b47c4e1ecd0709278f4910c18777a504-le64.cache-4
+7f34ec108000-7f34ec11b000 r--s 00000000 08:01 12451961                   /var/cache/fontconfig/d52a8644073d54c13679302ca1180695-le64.cache-4
+7f34ec11b000-7f34ec124000 r--s 00000000 08:01 12451941                   /var/cache/fontconfig/3f7329c5293ffd510edef78f73874cfd-le64.cache-4
+7f34ec124000-7f34ec128000 r--s 00000000 08:01 12451962                   /var/cache/fontconfig/d589a48862398ed80a3d6066f4f56f4c-le64.cache-4
+7f34ec128000-7f34ec129000 r--s 00000000 08:01 12451933                   /var/cache/fontconfig/0c9eb80ebd1c36541ebe2852d3bb0c49-le64.cache-4
+7f34ec129000-7f34ec12a000 r--s 00001000 08:01 3542232                    /home/neethu/Intern/Tools/android-studio/plugins/tasks/lib/tasks-java.jar
+7f34ec12a000-7f34ec12b000 r--s 0000a000 08:01 5507831                    /home/neethu/Intern/Tools/android-studio/plugins/svn4idea/lib/resources_en.jar
+7f34ec12b000-7f34ec12c000 r--s 00000000 08:01 5507834                    /home/neethu/Intern/Tools/android-studio/plugins/svn4idea/lib/jsch.agentproxy.svnkit-trilead-ssh2.jar
+7f34ec12c000-7f34ec130000 r--s 00026000 08:01 5507856                    /home/neethu/Intern/Tools/android-studio/plugins/svn4idea/lib/svnkit-javahl16.zip
+7f34ec130000-7f34ec139000 r--s 0008d000 08:01 5507833                    /home/neethu/Intern/Tools/android-studio/plugins/svn4idea/lib/sqljetsrc.zip
+7f34ec139000-7f34ec13e000 r--s 00039000 08:01 5507852                    /home/neethu/Intern/Tools/android-studio/plugins/svn4idea/lib/trilead.jar
+7f34ec13e000-7f34ec14e000 r--s 000ab000 08:01 5507853                    /home/neethu/Intern/Tools/android-studio/plugins/svn4idea/lib/sqljet.jar
+7f34ec14e000-7f34ec152000 r--s 0003a000 08:01 5637240                    /home/neethu/Intern/Tools/android-studio/plugins/git4idea/lib/trilead-ssh2.jar
+7f34ec152000-7f34ec154000 r--s 00020000 08:01 5637241                    /home/neethu/Intern/Tools/android-studio/plugins/git4idea/lib/remote-servers-git.jar
+7f34ec154000-7f34ec157000 r--s 00017000 08:01 5637243                    /home/neethu/Intern/Tools/android-studio/plugins/git4idea/lib/ini4j-0.5.2-patched.jar
+7f34ec157000-7f34ec16c000 r--s 002e8000 08:01 5637242                    /home/neethu/Intern/Tools/android-studio/plugins/git4idea/lib/git4idea.jar
+7f34ec16c000-7f34ec16f000 r--s 0002a000 08:01 5508058                    /home/neethu/Intern/Tools/android-studio/plugins/cvsIntegration/lib/cvs_util.jar
+7f34ec16f000-7f34ec1a9000 r-xp 00000000 08:01 1318859                    /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.8.0
+7f34ec1a9000-7f34ec3a8000 ---p 0003a000 08:01 1318859                    /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.8.0
+7f34ec3a8000-7f34ec3aa000 r--p 00039000 08:01 1318859                    /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.8.0
+7f34ec3aa000-7f34ec3ab000 rw-p 0003b000 08:01 1318859                    /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.8.0
+7f34ec3ab000-7f34ec3f5000 r-xp 00000000 08:01 1319298                    /usr/lib/x86_64-linux-gnu/libpango-1.0.so.0.3600.3
+7f34ec3f5000-7f34ec5f5000 ---p 0004a000 08:01 1319298                    /usr/lib/x86_64-linux-gnu/libpango-1.0.so.0.3600.3
+7f34ec5f5000-7f34ec5f7000 r--p 0004a000 08:01 1319298                    /usr/lib/x86_64-linux-gnu/libpango-1.0.so.0.3600.3
+7f34ec5f7000-7f34ec5f8000 rw-p 0004c000 08:01 1319298                    /usr/lib/x86_64-linux-gnu/libpango-1.0.so.0.3600.3
+7f34ec5f8000-7f34ec60c000 r-xp 00000000 08:01 1319302                    /usr/lib/x86_64-linux-gnu/libpangoft2-1.0.so.0.3600.3
+7f34ec60c000-7f34ec80b000 ---p 00014000 08:01 1319302                    /usr/lib/x86_64-linux-gnu/libpangoft2-1.0.so.0.3600.3
+7f34ec80b000-7f34ec80c000 r--p 00013000 08:01 1319302                    /usr/lib/x86_64-linux-gnu/libpangoft2-1.0.so.0.3600.3
+7f34ec80c000-7f34ec80d000 rw-p 00014000 08:01 1319302                    /usr/lib/x86_64-linux-gnu/libpangoft2-1.0.so.0.3600.3
+7f34ec80d000-7f34ec979000 r-xp 00000000 08:01 1318946                    /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0.4002.0
+7f34ec979000-7f34ecb78000 ---p 0016c000 08:01 1318946                    /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0.4002.0
+7f34ecb78000-7f34ecb7c000 r--p 0016b000 08:01 1318946                    /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0.4002.0
+7f34ecb7c000-7f34ecb7e000 rw-p 0016f000 08:01 1318946                    /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0.4002.0
+7f34ecb7e000-7f34ecb80000 rw-p 00000000 00:00 0 
+7f34ecb80000-7f34ecba0000 r-xp 00000000 08:01 1311647                    /usr/lib/x86_64-linux-gnu/libgdk_pixbuf-2.0.so.0.3000.7
+7f34ecba0000-7f34ecd9f000 ---p 00020000 08:01 1311647                    /usr/lib/x86_64-linux-gnu/libgdk_pixbuf-2.0.so.0.3000.7
+7f34ecd9f000-7f34ecda0000 r--p 0001f000 08:01 1311647                    /usr/lib/x86_64-linux-gnu/libgdk_pixbuf-2.0.so.0.3000.7
+7f34ecda0000-7f34ecda1000 rw-p 00020000 08:01 1311647                    /usr/lib/x86_64-linux-gnu/libgdk_pixbuf-2.0.so.0.3000.7
+7f34ecda1000-7f34ecea7000 r-xp 00000000 08:01 1318694                    /usr/lib/x86_64-linux-gnu/libcairo.so.2.11301.0
+7f34ecea7000-7f34ed0a6000 ---p 00106000 08:01 1318694                    /usr/lib/x86_64-linux-gnu/libcairo.so.2.11301.0
+7f34ed0a6000-7f34ed0a9000 r--p 00105000 08:01 1318694                    /usr/lib/x86_64-linux-gnu/libcairo.so.2.11301.0
+7f34ed0a9000-7f34ed0aa000 rw-p 00108000 08:01 1318694                    /usr/lib/x86_64-linux-gnu/libcairo.so.2.11301.0
+7f34ed0aa000-7f34ed0ac000 rw-p 00000000 00:00 0 
+7f34ed0ac000-7f34ed0cb000 r-xp 00000000 08:01 1318655                    /usr/lib/x86_64-linux-gnu/libatk-1.0.so.0.21009.1
+7f34ed0cb000-7f34ed2cb000 ---p 0001f000 08:01 1318655                    /usr/lib/x86_64-linux-gnu/libatk-1.0.so.0.21009.1
+7f34ed2cb000-7f34ed2cd000 r--p 0001f000 08:01 1318655                    /usr/lib/x86_64-linux-gnu/libatk-1.0.so.0.21009.1
+7f34ed2cd000-7f34ed2ce000 rw-p 00021000 08:01 1318655                    /usr/lib/x86_64-linux-gnu/libatk-1.0.so.0.21009.1
+7f34ed2ce000-7f34ed2d9000 r-xp 00000000 08:01 1319300                    /usr/lib/x86_64-linux-gnu/libpangocairo-1.0.so.0.3600.3
+7f34ed2d9000-7f34ed4d9000 ---p 0000b000 08:01 1319300                    /usr/lib/x86_64-linux-gnu/libpangocairo-1.0.so.0.3600.3
+7f34ed4d9000-7f34ed4da000 r--p 0000b000 08:01 1319300                    /usr/lib/x86_64-linux-gnu/libpangocairo-1.0.so.0.3600.3
+7f34ed4da000-7f34ed4db000 rw-p 0000c000 08:01 1319300                    /usr/lib/x86_64-linux-gnu/libpangocairo-1.0.so.0.3600.3
+7f34ed4db000-7f34ed4de000 r-xp 00000000 08:01 1318958                    /usr/lib/x86_64-linux-gnu/libgmodule-2.0.so.0.4002.0
+7f34ed4de000-7f34ed6dd000 ---p 00003000 08:01 1318958                    /usr/lib/x86_64-linux-gnu/libgmodule-2.0.so.0.4002.0
+7f34ed6dd000-7f34ed6de000 r--p 00002000 08:01 1318958                    /usr/lib/x86_64-linux-gnu/libgmodule-2.0.so.0.4002.0
+7f34ed6de000-7f34ed6df000 rw-p 00003000 08:01 1318958                    /usr/lib/x86_64-linux-gnu/libgmodule-2.0.so.0.4002.0
+7f34ed6df000-7f34ed78d000 r-xp 00000000 08:01 1314434                    /usr/lib/x86_64-linux-gnu/libgdk-x11-2.0.so.0.2400.23
+7f34ed78d000-7f34ed98c000 ---p 000ae000 08:01 1314434                    /usr/lib/x86_64-linux-gnu/libgdk-x11-2.0.so.0.2400.23
+7f34ed98c000-7f34ed990000 r--p 000ad000 08:01 1314434                    /usr/lib/x86_64-linux-gnu/libgdk-x11-2.0.so.0.2400.23
+7f34ed990000-7f34ed992000 rw-p 000b1000 08:01 1314434                    /usr/lib/x86_64-linux-gnu/libgdk-x11-2.0.so.0.2400.23
+7f34ed992000-7f34eddc2000 r-xp 00000000 08:01 1314435                    /usr/lib/x86_64-linux-gnu/libgtk-x11-2.0.so.0.2400.23
+7f34eddc2000-7f34edfc1000 ---p 00430000 08:01 1314435                    /usr/lib/x86_64-linux-gnu/libgtk-x11-2.0.so.0.2400.23
+7f34edfc1000-7f34edfc8000 r--p 0042f000 08:01 1314435                    /usr/lib/x86_64-linux-gnu/libgtk-x11-2.0.so.0.2400.23
+7f34edfc8000-7f34edfcc000 rw-p 00436000 08:01 1314435                    /usr/lib/x86_64-linux-gnu/libgtk-x11-2.0.so.0.2400.23
+7f34edfcc000-7f34ee1cf000 rw-p 00000000 00:00 0 
+7f34ee1cf000-7f34ee1d2000 ---p 00000000 00:00 0 
+7f34ee1d2000-7f34ee2d0000 rw-p 00000000 00:00 0                          [stack:13063]
+7f34ee2d0000-7f34ee2d5000 r-xp 00000000 08:01 1318578                    /usr/lib/x86_64-linux-gnu/libXfixes.so.3.1.0
+7f34ee2d5000-7f34ee4d4000 ---p 00005000 08:01 1318578                    /usr/lib/x86_64-linux-gnu/libXfixes.so.3.1.0
+7f34ee4d4000-7f34ee4d5000 r--p 00004000 08:01 1318578                    /usr/lib/x86_64-linux-gnu/libXfixes.so.3.1.0
+7f34ee4d5000-7f34ee4d6000 rw-p 00005000 08:01 1318578                    /usr/lib/x86_64-linux-gnu/libXfixes.so.3.1.0
+7f34ee4d6000-7f34ee4df000 r-xp 00000000 08:01 1318570                    /usr/lib/x86_64-linux-gnu/libXcursor.so.1.0.2
+7f34ee4df000-7f34ee6de000 ---p 00009000 08:01 1318570                    /usr/lib/x86_64-linux-gnu/libXcursor.so.1.0.2
+7f34ee6de000-7f34ee6df000 r--p 00008000 08:01 1318570                    /usr/lib/x86_64-linux-gnu/libXcursor.so.1.0.2
+7f34ee6df000-7f34ee6e0000 rw-p 00009000 08:01 1318570                    /usr/lib/x86_64-linux-gnu/libXcursor.so.1.0.2
+7f34ee6e0000-7f34ee6e3000 ---p 00000000 00:00 0 
+7f34ee6e3000-7f34ee7e1000 rw-p 00000000 00:00 0                          [stack:13062]
+7f34ee7e1000-7f34ee7f7000 r-xp 00000000 08:01 4456541                    /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f34ee7f7000-7f34ee9f6000 ---p 00016000 08:01 4456541                    /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f34ee9f6000-7f34ee9f7000 rw-p 00015000 08:01 4456541                    /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f34ee9f7000-7f34eea5c000 r-xp 00000000 08:01 5243966                    /home/neethu/Intern/Tools/jdk1.8.0_71/jre/lib/amd64/libfontmanager.so
+7f34eea5c000-7f34eec5b000 ---p 00065000 08:01 5243966                    /home/neethu/Intern/Tools/jdk1.8.0_71/jre/lib/amd64/libfontmanager.so
+7f34eec5b000-7f34eec60000 rw-p 00064000 08:01 5243966                    /home/neethu/Intern/Tools/jdk1.8.0_71/jre/lib/amd64/libfontmanager.so
+7f34eec60000-7f34eee70000 rw-p 00000000 00:00 0 
+7f34eee70000-7f34eee75000 r-xp 00000000 08:01 1318574                    /usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+7f34eee75000-7f34ef074000 ---p 00005000 08:01 1318574                    /usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+7f34ef074000-7f34ef075000 r--p 00004000 08:01 1318574                    /usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+7f34ef075000-7f34ef076000 rw-p 00005000 08:01 1318574                    /usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+7f34ef076000-7f34ef078000 r-xp 00000000 08:01 1318563                    /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+7f34ef078000-7f34ef278000 ---p 00002000 08:01 1318563                    /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+7f34ef278000-7f34ef279000 r--p 00002000 08:01 1318563                    /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+7f34ef279000-7f34ef27a000 rw-p 00003000 08:01 1318563                    /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+7f34ef27a000-7f34ef297000 r-xp 00000000 08:01 1319629                    /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+7f34ef297000-7f34ef497000 ---p 0001d000 08:01 1319629                    /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+7f34ef497000-7f34ef498000 r--p 0001d000 08:01 1319629                    /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+7f34ef498000-7f34ef499000 rw-p 0001e000 08:01 1319629                    /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+7f34ef499000-7f34ef4a8000 r-xp 00000000 08:01 1318584                    /usr/lib/x86_64-linux-gnu/libXi.so.6.1.0
+7f34ef4a8000-7f34ef6a7000 ---p 0000f000 08:01 1318584                    /usr/lib/x86_64-linux-gnu/libXi.so.6.1.0
+7f34ef6a7000-7f34ef6a8000 r--p 0000e000 08:01 1318584                    /usr/lib/x86_64-linux-gnu/libXi.so.6.1.0
+7f34ef6a8000-7f34ef6a9000 rw-p 0000f000 08:01 1318584                    /usr/lib/x86_64-linux-gnu/libXi.so.6.1.0
+7f34ef6a9000-7f34ef6ae000 r-xp 00000000 08:01 1318604                    /usr/lib/x86_64-linux-gnu/libXtst.so.6.1.0
+7f34ef6ae000-7f34ef8ad000 ---p 00005000 08:01 1318604                    /usr/lib/x86_64-linux-gnu/libXtst.so.6.1.0
+7f34ef8ad000-7f34ef8ae000 r--p 00004000 08:01 1318604                    /usr/lib/x86_64-linux-gnu/libXtst.so.6.1.0
+7f34ef8ae000-7f34ef8af000 rw-p 00005000 08:01 1318604                    /usr/lib/x86_64-linux-gnu/libXtst.so.6.1.0
+7f34ef8af000-7f34ef8b8000 r-xp 00000000 08:01 1318598                    /usr/lib/x86_64-linux-gnu/libXrender.so.1.3.0
+7f34ef8b8000-7f34efab7000 ---p 00009000 08:01 1318598                    /usr/lib/x86_64-linux-gnu/libXrender.so.1.3.0
+7f34efab7000-7f34efab8000 r--p 00008000 08:01 1318598                    /usr/lib/x86_64-linux-gnu/libXrender.so.1.3.0
+7f34efab8000-7f34efab9000 rw-p 00009000 08:01 1318598                    /usr/lib/x86_64-linux-gnu/libXrender.so.1.3.0
+7f34efab9000-7f34efbe9000 r-xp 00000000 08:01 1318559                    /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+7f34efbe9000-7f34efde9000 ---p 00130000 08:01 1318559                    /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+7f34efde9000-7f34efdea000 r--p 00130000 08:01 1318559                    /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+7f34efdea000-7f34efdee000 rw-p 00131000 08:01 1318559                    /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+7f34efdee000-7f34efdff000 r-xp 00000000 08:01 1318576                    /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+7f34efdff000-7f34efffe000 ---p 00011000 08:01 1318576                    /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+7f34efffe000-7f34effff000 r--p 00010000 08:01 1318576                    /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+7f34effff000-7f34f0000000 rw-p 00011000 08:01 1318576                    /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+7f34f0000000-7f34f1507000 rw-p 00000000 00:00 0 
+7f34f1507000-7f34f4000000 ---p 00000000 00:00 0 
+7f34f4000000-7f34f765d000 rw-p 00000000 00:00 0 
+7f34f765d000-7f34f8000000 ---p 00000000 00:00 0 
+7f34f8000000-7f34f80a0000 rw-p 00000000 00:00 0 
+7f34f80a0000-7f34fc000000 ---p 00000000 00:00 0 
+7f34fc000000-7f34fd852000 rw-p 00000000 00:00 0 
+7f34fd852000-7f3500000000 ---p 00000000 00:00 0 
+7f3500000000-7f3500021000 rw-p 00000000 00:00 0 
+7f3500021000-7f3504000000 ---p 00000000 00:00 0 
+7f3504000000-7f3504021000 rw-p 00000000 00:00 0 
+7f3504021000-7f3508000000 ---p 00000000 00:00 0 
+7f3508000000-7f35081e6000 rw-p 00000000 00:00 0 
+7f35081e6000-7f350c000000 ---p 00000000 00:00 0 
+7f350c000000-7f350ce8a000 rw-p 00000000 00:00 0 
+7f350ce8a000-7f3510000000 ---p 00000000 00:00 0 
+7f3510000000-7f3510025000 rw-p 00000000 00:00 0 
+7f3510025000-7f3514000000 ---p 00000000 00:00 0 
+7f3514000000-7f35141df000 rw-p 00000000 00:00 0 
+7f35141df000-7f3518000000 ---p 00000000 00:00 0 
+7f3518000000-7f3518003000 r--s 00000000 08:01 12460406                   /var/cache/fontconfig/e13b20fdb08344e0e664864cc2ede53d-le64.cache-4
+7f3518003000-7f3518007000 r--s 00000000 08:01 12460425                   /var/cache/fontconfig/7ef2298fde41cc6eeb7af42e48b7d293-le64.cache-4
+7f3518007000-7f3518008000 r--s 00007000 08:01 5637238                    /home/neethu/Intern/Tools/android-studio/plugins/git4idea/lib/resources_en.jar
+7f3518008000-7f3518009000 r--s 0000f000 08:01 5637239                    /home/neethu/Intern/Tools/android-studio/plugins/git4idea/lib/git4idea-rt.jar
+7f3518009000-7f351801d000 r--s 001f0000 08:01 5508057                    /home/neethu/Intern/Tools/android-studio/plugins/cvsIntegration/lib/cvsIntegration.jar
+7f351801d000-7f351801f000 r--s 00017000 08:01 5508054                    /home/neethu/Intern/Tools/android-studio/plugins/cvsIntegration/lib/smartcvs-src.jar
+7f351801f000-7f3518020000 r--s 00007000 08:01 5508055                    /home/neethu/Intern/Tools/android-studio/plugins/cvsIntegration/lib/resources_en.jar
+7f3518020000-7f3518024000 r--s 00039000 08:01 5508053                    /home/neethu/Intern/Tools/android-studio/plugins/cvsIntegration/lib/trilead-ssh2-build213.jar
+7f3518024000-7f351802b000 r--s 00081000 08:01 5508056                    /home/neethu/Intern/Tools/android-studio/plugins/cvsIntegration/lib/javacvs-src.jar
+7f351802b000-7f3518031000 r--s 00041000 08:01 5637257                    /home/neethu/Intern/Tools/android-studio/plugins/google-cloud-testing/lib/tightvnc.jar
+7f3518031000-7f3518034000 r--s 00014000 08:01 5637253                    /home/neethu/Intern/Tools/android-studio/plugins/google-cloud-testing/lib/google-api-services-storage-v1-rev1-1.18.0-rc.jar
+7f3518034000-7f3518037000 r--s 00011000 08:01 5637256                    /home/neethu/Intern/Tools/android-studio/plugins/google-cloud-testing/lib/google-api-services-testing-v1-revsnapshot-1.20.0.jar
+7f3518037000-7f3518042000 r--s 00154000 08:01 5637255                    /home/neethu/Intern/Tools/android-studio/plugins/google-cloud-testing/lib/google-cloud-testing.jar
+7f3518042000-7f3518045000 r--s 00010000 08:01 5637254                    /home/neethu/Intern/Tools/android-studio/plugins/google-cloud-testing/lib/google-api-services-toolresults-v1beta3-rev20151013-1.20.0.jar
+7f3518045000-7f351804a000 r--s 00095000 08:01 5507860                    /home/neethu/Intern/Tools/android-studio/plugins/android-ndk/lib/android-ndk.jar
+7f351804a000-7f351804d000 r--s 0003d000 08:01 5508098                    /home/neethu/Intern/Tools/android-studio/plugins/sdk-updates/lib/sdk-updates.jar
+7f351804d000-7f351804e000 r--s 00002000 08:01 5508102                    /home/neethu/Intern/Tools/android-studio/plugins/android/lib/antlr4-annotations-4.5.jar
+7f351804e000-7f3518050000 r--s 0000b000 08:01 5508309                    /home/neethu/Intern/Tools/android-studio/plugins/android/lib/GoogleFeedback.jar
+7f3518050000-7f3518083000 r--s 00203000 08:01 5508112                    /home/neethu/Intern/Tools/android-studio/plugins/android/lib/bcprov-jdk15on-1.48.jar
+7f3518083000-7f3518086000 r--s 00028000 08:01 5508108                    /home/neethu/Intern/Tools/android-studio/plugins/android/lib/layoutlib-api.jar
+7f3518086000-7f3518087000 r--s 0000c000 08:01 5508288                    /home/neethu/Intern/Tools/android-studio/plugins/android/lib/asm-5.0.3.jar
+7f3518087000-7f351808b000 r--s 0002a000 08:01 5508106                    /home/neethu/Intern/Tools/android-studio/plugins/android/lib/commons-io-2.4.jar
+7f351808b000-7f351808c000 r--s 0000a000 08:01 5509174                    /home/neethu/Intern/Tools/android-studio/plugins/android/lib/kxml2-2.3.0.jar
+7f351808c000-7f351808f000 r--p 00000000 08:01 2890655                    /home/neethu/.config/dconf/user (deleted)
+7f351808f000-7f3518090000 r--s 00000000 00:16 657153                     /run/user/1000/dconf/user (deleted)
+7f3518090000-7f35180d1000 r--p 00000000 08:01 2359374                    /usr/share/glib-2.0/schemas/gschemas.compiled
+7f35180d1000-7f35180e3000 r--s 00345000 08:01 4198851                    /home/neethu/Intern/Tools/jdk1.8.0_71/jre/lib/resources.jar
+7f35180e3000-7f3518137000 r-xp 00000000 08:01 5243941                    /home/neethu/Intern/Tools/jdk1.8.0_71/jre/lib/amd64/libawt_xawt.so
+7f3518137000-7f3518337000 ---p 00054000 08:01 5243941                    /home/neethu/Intern/Tools/jdk1.8.0_71/jre/lib/amd64/libawt_xawt.so
+7f3518337000-7f351833b000 rw-p 00054000 08:01 5243941                    /home/neethu/Intern/Tools/jdk1.8.0_71/jre/lib/amd64/libawt_xawt.so
+7f351833b000-7f351833c000 rw-p 00000000 00:00 0 
+7f351833c000-7f35183de000 r-xp 00000000 08:01 5243924                    /home/neethu/Intern/Tools/jdk1.8.0_71/jre/lib/amd64/libawt.so
+7f35183de000-7f35185de000 ---p 000a2000 08:01 5243924                    /home/neethu/Intern/Tools/jdk1.8.0_71/jre/lib/amd64/libawt.so
+7f35185de000-7f35185ea000 rw-p 000a2000 08:01 5243924                    /home/neethu/Intern/Tools/jdk1.8.0_71/jre/lib/amd64/libawt.so
+7f35185ea000-7f351860e000 rw-p 00000000 00:00 0 
+7f351860e000-7f3518614000 r--s 002f8000 08:01 4198837                    /home/neethu/Intern/Tools/jdk1.8.0_71/jre/lib/charsets.jar
+7f3518614000-7f351861e000 r--s 00116000 08:01 5243886                    /home/neethu/Intern/Tools/jdk1.8.0_71/jre/lib/ext/localedata.jar
+7f351861e000-7f351861f000 r--s 00010000 08:01 5243889                    /home/neethu/Intern/Tools/jdk1.8.0_71/jre/lib/ext/zipfs.jar
+7f351861f000-7f351863a000 r--s 001d2000 08:01 5243888                    /home/neethu/Intern/Tools/jdk1.8.0_71/jre/lib/ext/nashorn.jar
+7f351863a000-7f3518656000 r--s 00393000 08:01 5243894                    /home/neethu/Intern/Tools/jdk1.8.0_71/jre/lib/ext/cldrdata.jar
+7f3518656000-7f3518657000 r--s 00009000 08:01 5243887                    /home/neethu/Intern/Tools/jdk1.8.0_71/jre/lib/ext/sunec.jar
+7f3518657000-7f3518658000 r--s 0000a000 08:01 5243885                    /home/neethu/Intern/Tools/jdk1.8.0_71/jre/lib/ext/jaccess.jar
+7f3518658000-7f35186ed000 r--s 01108000 08:01 5243893                    /home/neethu/Intern/Tools/jdk1.8.0_71/jre/lib/ext/jfxrt.jar
+7f35186ed000-7f35186f1000 r--s 0003a000 08:01 5243895                    /home/neethu/Intern/Tools/jdk1.8.0_71/jre/lib/ext/sunpkcs11.jar
+7f35186f1000-7f35186f7000 r--s 0003f000 08:01 5243890                    /home/neethu/Intern/Tools/jdk1.8.0_71/jre/lib/ext/sunjce_provider.jar
+7f35186f7000-7f35186f9000 r--s 00001000 08:01 5243892                    /home/neethu/Intern/Tools/jdk1.8.0_71/jre/lib/ext/dnsns.jar
+7f35186f9000-7f35186fa000 r--s 00003000 08:01 3282424                    /home/neethu/Intern/Tools/android-studio/lib/ant/lib/ant-swing.jar
+7f35186fa000-7f35186fb000 r--s 00006000 08:01 3282389                    /home/neethu/Intern/Tools/android-studio/lib/ant/lib/ant-jai.jar
+7f35186fb000-7f35186fc000 r--s 00003000 08:01 3282430                    /home/neethu/Intern/Tools/android-studio/lib/ant/lib/ant-apache-bcel.jar
+7f35186fc000-7f35186fe000 r--s 00002000 08:01 3282391                    /home/neethu/Intern/Tools/android-studio/lib/ant/lib/ant-junit4.jar
+7f35186fe000-7f35186ff000 r--s 00002000 08:01 3282427                    /home/neethu/Intern/Tools/android-studio/lib/ant/lib/ant-apache-oro.jar
+7f35186ff000-7f351871d000 r--s 001cf000 08:01 3282400                    /home/neethu/Intern/Tools/android-studio/lib/ant/lib/ant.jar
+7f351871d000-7f351871e000 r--s 00002000 08:01 3282421                    /home/neethu/Intern/Tools/android-studio/lib/ant/lib/ant-antlr.jar
+7f351871e000-7f351871f000 r--s 00002000 08:01 3282398                    /home/neethu/Intern/Tools/android-studio/lib/ant/lib/ant-apache-bsf.jar
+7f351871f000-7f3518720000 r--s 00003000 08:01 3282403                    /home/neethu/Intern/Tools/android-studio/lib/ant/lib/ant-javamail.jar
+7f3518720000-7f3518721000 r--s 00003000 08:01 3282399                    /home/neethu/Intern/Tools/android-studio/lib/ant/lib/ant-netrexx.jar
+7f3518721000-7f3518723000 r--s 0000a000 08:01 3282401                    /home/neethu/Intern/Tools/android-studio/lib/ant/lib/ant-jsch.jar
+7f3518723000-7f3518724000 r--s 00002000 08:01 3282420                    /home/neethu/Intern/Tools/android-studio/lib/ant/lib/ant-commons-logging.jar
+7f3518724000-7f3518725000 r--s 00002000 08:01 3282390                    /home/neethu/Intern/Tools/android-studio/lib/ant/lib/ant-apache-resolver.jar
+7f3518725000-7f3518726000 r--s 00001000 08:01 3282422                    /home/neethu/Intern/Tools/android-studio/lib/ant/lib/ant-apache-xalan2.jar
+7f3518726000-7f3518728000 r--s 00001000 08:01 3282416                    /home/neethu/Intern/Tools/android-studio/lib/ant/lib/ant-apache-log4j.jar
+7f3518728000-7f351872b000 r--s 00014000 08:01 3282415                    /home/neethu/Intern/Tools/android-studio/lib/ant/lib/ant-commons-net.jar
+7f351872b000-7f351872d000 r--s 00002000 08:01 3282419                    /home/neethu/Intern/Tools/android-studio/lib/ant/lib/ant-jmf.jar
+7f351872d000-7f351872e000 r--s 00003000 08:01 3282417                    /home/neethu/Intern/Tools/android-studio/lib/ant/lib/ant-jdepend.jar
+7f351872e000-7f3518730000 r--s 00004000 08:01 3282425                    /home/neethu/Intern/Tools/android-studio/lib/ant/lib/ant-testutil.jar
+7f3518730000-7f3518731000 r--s 00002000 08:01 3282407                    /home/neethu/Intern/Tools/android-studio/lib/ant/lib/ant-apache-regexp.jar
+7f3518731000-7f3518733000 r--s 0001b000 08:01 3282433                    /home/neethu/Intern/Tools/android-studio/lib/ant/lib/ant-junit.jar
+7f3518733000-7f3518734000 r--s 00004000 08:01 3282410                    /home/neethu/Intern/Tools/android-studio/lib/ant/lib/ant-launcher.jar
+7f3518734000-7f3518735000 r--s 00005000 08:01 3025246                    /home/neethu/Intern/Tools/android-studio/lib/optimizedFileManager.jar
+7f3518735000-7f3518769000 r--s 002b0000 08:01 3025338                    /home/neethu/Intern/Tools/android-studio/lib/netty-all-4.1.0.Beta8.jar
+7f3518769000-7f3518770000 r--s 0007b000 08:01 3025256                    /home/neethu/Intern/Tools/android-studio/lib/protobuf-2.5.0.jar
+7f3518770000-7f351877d000 r--s 00109000 08:01 3025325                    /home/neethu/Intern/Tools/android-studio/lib/rhino-js-1_7R4.jar
+7f351877d000-7f351877f000 r--s 0000d000 08:01 3025283                    /home/neethu/Intern/Tools/android-studio/lib/markdown4j-2.2.jar
+7f351877f000-7f3518787000 r--s 000c4000 08:01 3025345                    /home/neethu/Intern/Tools/android-studio/lib/jps-model.jar
+7f3518787000-7f3518789000 r--s 0000a000 08:01 3025302                    /home/neethu/Intern/Tools/android-studio/lib/serviceMessages.jar
+7f3518789000-7f351878d000 r--s 00034000 08:01 3025314                    /home/neethu/Intern/Tools/android-studio/lib/xmlrpc-2.0.jar
+7f351878d000-7f3518797000 r--s 00080000 08:01 3025297                    /home/neethu/Intern/Tools/android-studio/lib/jh.jar
+7f3518797000-7f351879d000 r--s 00059000 08:01 3025268                    /home/neethu/Intern/Tools/android-studio/lib/asm-all.jar
+7f351879d000-7f35187a1000 r--s 00040000 08:01 3025335                    /home/neethu/Intern/Tools/android-studio/lib/jsr166e.jar
+7f35187a1000-7f35187a3000 r--s 0000b000 08:01 3025309                    /home/neethu/Intern/Tools/android-studio/lib/pty4j-0.5.jar
+7f35187a3000-7f35187ac000 r--s 00058000 08:01 3025249                    /home/neethu/Intern/Tools/android-studio/lib/jgoodies-looks-2.4.2.jar
+7f35187ac000-7f35187b1000 r--s 0002f000 08:01 3025248                    /home/neethu/Intern/Tools/android-studio/lib/gson-2.3.1.jar
+7f35187b1000-7f35187b3000 r--s 00007000 08:01 3025274                    /home/neethu/Intern/Tools/android-studio/lib/coverage-agent.jar
+7f35187b3000-7f35187b4000 r--s 00007000 08:01 3025245                    /home/neethu/Intern/Tools/android-studio/lib/slf4j-api-1.7.10.jar
+7f35187b4000-7f35187df000 r--s 001f9000 08:01 3025284                    /home/neethu/Intern/Tools/android-studio/lib/guava-17.0.jar
+7f35187df000-7f35187ef000 r--s 000df000 08:01 3025313                    /home/neethu/Intern/Tools/android-studio/lib/kotlin-runtime.jar
+7f35187ef000-7f3518808000 r--s 00135000 08:01 3025272                    /home/neethu/Intern/Tools/android-studio/lib/xercesImpl.jar
+7f3518808000-7f351880a000 r--s 00006000 08:01 3025244                    /home/neethu/Intern/Tools/android-studio/lib/fluent-hc-4.4.1.jar
+7f351880a000-7f351880b000 r--s 00002000 08:01 3025269                    /home/neethu/Intern/Tools/android-studio/lib/jsch.agentproxy.connector-factory.jar
+7f351880b000-7f3518817000 r--s 0006a000 08:01 3025280                    /home/neethu/Intern/Tools/android-studio/lib/xstream-1.4.3.jar
+7f3518817000-7f3518819000 r--s 00013000 08:01 3025311                    /home/neethu/Intern/Tools/android-studio/lib/resolver.jar
+7f3518819000-7f351881b000 r--s 00010000 08:01 3025327                    /home/neethu/Intern/Tools/android-studio/lib/coverage-instrumenter.jar
+7f351881b000-7f351881f000 r--s 0004b000 08:01 3025286                    /home/neethu/Intern/Tools/android-studio/lib/asm4-all.jar
+7f351881f000-7f3518821000 r--s 00004000 08:01 3025266                    /home/neethu/Intern/Tools/android-studio/lib/annotations.jar
+7f3518821000-7f3518824000 r--s 0001b000 08:01 3025344                    /home/neethu/Intern/Tools/android-studio/lib/junit.jar
+7f3518824000-7f3518826000 r--s 0001b000 08:01 3025331                    /home/neethu/Intern/Tools/android-studio/lib/jayatana-1.2.4.jar
+7f3518826000-7f351882d000 r--s 0003a000 08:01 3025301                    /home/neethu/Intern/Tools/android-studio/lib/commons-codec-1.9.jar
+7f351882d000-7f3518832000 r--s 0002d000 08:01 3025298                    /home/neethu/Intern/Tools/android-studio/lib/kryo-2.22.jar
+7f3518832000-7f3518833000 r--s 00001000 08:01 3025285                    /home/neethu/Intern/Tools/android-studio/lib/jsch.agentproxy.usocket-jna.jar
+7f3518833000-7f3518835000 r--s 00009000 08:01 3025277                    /home/neethu/Intern/Tools/android-studio/lib/hamcrest-core-1.3.jar
+7f3518835000-7f351883e000 r--s 0002d000 08:01 3025308                    /home/neethu/Intern/Tools/android-studio/lib/xml-apis.jar
+7f351883e000-7f3518846000 r--s 00045000 08:01 3025336                    /home/neethu/Intern/Tools/android-studio/lib/junit-4.12.jar
+7f3518846000-7f3518847000 r--s 00014000 08:01 3025318                    /home/neethu/Intern/Tools/android-studio/lib/asm-commons.jar
+7f3518847000-7f3518848000 r--s 0000d000 08:01 3025321                    /home/neethu/Intern/Tools/android-studio/lib/imgscalr-lib-4.2.jar
+7f3518848000-7f3518849000 r--s 00014000 08:01 3025328                    /home/neethu/Intern/Tools/android-studio/lib/nanoxml-2.2.3.jar
+7f3518849000-7f3518863000 r--s 00f59000 08:01 3025267                    /home/neethu/Intern/Tools/android-studio/lib/resources_en.jar
+7f3518863000-7f3518d04000 r--s 0914d000 08:01 3025340                    /home/neethu/Intern/Tools/android-studio/lib/idea.jar
+7f3518d04000-7f3518d08000 r--s 0004f000 08:01 3025295                    /home/neethu/Intern/Tools/android-studio/lib/forms_rt.jar
+7f3518d08000-7f3518d0e000 r--s 00031000 08:01 3025265                    /home/neethu/Intern/Tools/android-studio/lib/jaxen-1.1.3.jar
+7f3518d0e000-7f3518d14000 r--s 00047000 08:01 3025258                    /home/neethu/Intern/Tools/android-studio/lib/commons-httpclient-3.1-patched.jar
+7f3518d14000-7f3518d15000 r--s 00001000 08:01 3025282                    /home/neethu/Intern/Tools/android-studio/lib/jsch.agentproxy.pageant.jar
+7f3518d15000-7f3518d16000 r--s 00006000 08:01 3025348                    /home/neethu/Intern/Tools/android-studio/lib/winp-1.23.jar
+7f3518d16000-7f3518d18000 r--s 00001000 08:01 3025316                    /home/neethu/Intern/Tools/android-studio/lib/jsch.agentproxy.core.jar
+7f3518d18000-7f3518d1a000 r--s 00016000 08:01 3025333                    /home/neethu/Intern/Tools/android-studio/lib/asm.jar
+7f3518d1a000-7f3518d27000 r--s 0017f000 08:01 3025260                    /home/neethu/Intern/Tools/android-studio/lib/velocity.jar
+7f3518d27000-7f3518d2d000 r--s 0003f000 08:01 3025305                    /home/neethu/Intern/Tools/android-studio/lib/commons-net-3.3.jar
+7f3518d2d000-7f3518d2e000 r--s 00010000 08:01 3025261                    /home/neethu/Intern/Tools/android-studio/lib/jzlib-1.1.1.jar
+7f3518d2e000-7f3518d3b000 r--s 000a4000 08:01 3025347                    /home/neethu/Intern/Tools/android-studio/lib/httpclient-4.4.1.jar
+7f3518d3b000-7f3518e03000 r--s 01130000 08:01 3025307                    /home/neethu/Intern/Tools/android-studio/lib/openapi.jar
+7f3518e03000-7f3518e04000 r--s 00000000 08:01 3025320                    /home/neethu/Intern/Tools/android-studio/lib/minlog-1.2.jar
+7f3518e04000-7f3518e0b000 r--s 00048000 08:01 3025329                    /home/neethu/Intern/Tools/android-studio/lib/httpcore-4.4.1.jar
+7f3518e0b000-7f3518e0d000 r--s 00004000 08:01 3025326                    /home/neethu/Intern/Tools/android-studio/lib/jsr173_1.0_api.jar
+7f3518e0d000-7f3518e79000 r--s 00696000 08:01 3025315                    /home/neethu/Intern/Tools/android-studio/lib/groovy-all-2.3.9.jar
+7f3518e79000-7f3518e94000 r--s 00147000 08:01 3025310                    /home/neethu/Intern/Tools/android-studio/lib/swingx-core-1.6.2.jar
+7f3518e94000-7f3518e96000 r--s 00011000 08:01 3025324                    /home/neethu/Intern/Tools/android-studio/lib/miglayout-swing.jar
+7f3518e96000-7f3518e9a000 r--s 00035000 08:01 3025257                    /home/neethu/Intern/Tools/android-studio/lib/picocontainer.jar
+7f3518e9a000-7f3518e9c000 r--s 0000e000 08:01 3025262                    /home/neethu/Intern/Tools/android-studio/lib/commons-logging-1.2.jar
+7f3518e9c000-7f3518e9e000 r--s 00043000 08:01 3025291                    /home/neethu/Intern/Tools/android-studio/lib/jdkAnnotations.jar
+7f3518e9e000-7f3518ed6000 r--s 002a4000 08:01 3025346                    /home/neethu/Intern/Tools/android-studio/lib/icons.jar
+7f3518ed6000-7f3518ed8000 r--s 0001e000 08:01 3025264                    /home/neethu/Intern/Tools/android-studio/lib/idea_rt.jar
+7f3518ed8000-7f3518ed9000 r--s 00002000 08:01 3025288                    /home/neethu/Intern/Tools/android-studio/lib/cli-parser-1.1.jar
+7f3518ed9000-7f3518edb000 r--s 00004000 08:01 3025342                    /home/neethu/Intern/Tools/android-studio/lib/coverage-util.jar
+7f3518edb000-7f3518eed000 r--s 00220000 08:01 3025281                    /home/neethu/Intern/Tools/android-studio/lib/ecj-4.4.jar
+7f3518eed000-7f3518ef0000 r--s 0001c000 08:01 3025341                    /home/neethu/Intern/Tools/android-studio/lib/nekohtml-1.9.14.jar
+7f3518ef0000-7f3518f06000 r-xp 00000000 08:01 5243919                    /home/neethu/Intern/Tools/jdk1.8.0_71/jre/lib/amd64/libnet.so
+7f3518f06000-7f3519106000 ---p 00016000 08:01 5243919                    /home/neethu/Intern/Tools/jdk1.8.0_71/jre/lib/amd64/libnet.so
+7f3519106000-7f3519107000 rw-p 00016000 08:01 5243919                    /home/neethu/Intern/Tools/jdk1.8.0_71/jre/lib/amd64/libnet.so
+7f3519107000-7f3519118000 r-xp 00000000 08:01 5243974                    /home/neethu/Intern/Tools/jdk1.8.0_71/jre/lib/amd64/libnio.so
+7f3519118000-7f3519317000 ---p 00011000 08:01 5243974                    /home/neethu/Intern/Tools/jdk1.8.0_71/jre/lib/amd64/libnio.so
+7f3519317000-7f3519318000 rw-p 00010000 08:01 5243974                    /home/neethu/Intern/Tools/jdk1.8.0_71/jre/lib/amd64/libnio.so
+7f3519318000-7f3519319000 ---p 00000000 00:00 0 
+7f3519319000-7f3519419000 rw-p 00000000 00:00 0                          [stack:13037]
+7f3519419000-7f351941c000 ---p 00000000 00:00 0 
+7f351941c000-7f351951a000 rw-p 00000000 00:00 0                          [stack:13036]
+7f351951a000-7f351951d000 ---p 00000000 00:00 0 
+7f351951d000-7f351961b000 rw-p 00000000 00:00 0                          [stack:13035]
+7f351961b000-7f351961e000 ---p 00000000 00:00 0 
+7f351961e000-7f351971c000 rw-p 00000000 00:00 0                          [stack:13034]
+7f351971c000-7f351971f000 ---p 00000000 00:00 0 
+7f351971f000-7f351981d000 rw-p 00000000 00:00 0                          [stack:13033]
+7f351981d000-7f3519820000 ---p 00000000 00:00 0 
+7f3519820000-7f351991e000 rw-p 00000000 00:00 0                          [stack:13032]
+7f351991e000-7f351a000000 r--p 00000000 08:01 1317560                    /usr/lib/locale/locale-archive
+7f351a000000-7f351c000000 rw-p 00000000 00:00 0 
+7f351c000000-7f351c07a000 rw-p 00000000 00:00 0 
+7f351c07a000-7f3520000000 ---p 00000000 00:00 0 
+7f3520000000-7f3520004000 r--s 0001d000 08:01 3025287                    /home/neethu/Intern/Tools/android-studio/lib/microba.jar
+7f3520004000-7f3520005000 r--s 00009000 08:01 3025296                    /home/neethu/Intern/Tools/android-studio/lib/httpmime-4.4.1.jar
+7f3520005000-7f3520007000 r--s 00000000 08:01 3025247                    /home/neethu/Intern/Tools/android-studio/lib/jsch.agentproxy.sshagent.jar
+7f3520007000-7f3520016000 r--s 00068000 08:01 3025332                    /home/neethu/Intern/Tools/android-studio/lib/jing.jar
+7f3520016000-7f3520019000 r--s 00020000 08:01 3025303                    /home/neethu/Intern/Tools/android-studio/lib/purejavacomm.jar
+7f3520019000-7f352001d000 r--s 00411000 08:01 3025253                    /home/neethu/Intern/Tools/android-studio/lib/resources.jar
+7f352001d000-7f352002c000 r--s 0006b000 08:01 3025279                    /home/neethu/Intern/Tools/android-studio/lib/trang-core.jar
+7f352002c000-7f352002f000 r--s 0002d000 08:01 3025337                    /home/neethu/Intern/Tools/android-studio/lib/proxy-vole_20131209.jar
+7f352002f000-7f3520032000 r--s 0001b000 08:01 3025293                    /home/neethu/Intern/Tools/android-studio/lib/oromatcher.jar
+7f3520032000-7f3520036000 r--s 0002d000 08:01 3025259                    /home/neethu/Intern/Tools/android-studio/lib/automaton.jar
+7f3520036000-7f352004c000 r--s 002c3000 08:01 3025252                    /home/neethu/Intern/Tools/android-studio/lib/jps-builders.jar
+7f352004c000-7f3520053000 r--s 00043000 08:01 3025278                    /home/neethu/Intern/Tools/android-studio/lib/rngom-20051226-patched.jar
+7f3520053000-7f3520081000 r--s 001f7000 08:01 3025254                    /home/neethu/Intern/Tools/android-studio/lib/kotlin-reflect.jar
+7f3520081000-7f35200be000 r--s 00251000 08:01 3025343                    /home/neethu/Intern/Tools/android-studio/lib/xbean.jar
+7f35200be000-7f35200c1000 ---p 00000000 00:00 0 
+7f35200c1000-7f35201bf000 rw-p 00000000 00:00 0                          [stack:13031]
+7f35201bf000-7f35201c2000 ---p 00000000 00:00 0 
+7f35201c2000-7f35202c0000 rw-p 00000000 00:00 0                          [stack:13030]
+7f35202c0000-7f35202c1000 ---p 00000000 00:00 0 
+7f35202c1000-7f35203c1000 rw-p 00000000 00:00 0                          [stack:13029]
+7f35203c1000-7f3520599000 r--s 03d23000 08:01 4198838                    /home/neethu/Intern/Tools/jdk1.8.0_71/jre/lib/rt.jar
+7f3520599000-7f3521f00000 rw-p 00000000 00:00 0 
+7f3521f00000-7f3524700000 rwxp 00000000 00:00 0 
+7f3524700000-7f3530000000 ---p 00000000 00:00 0 
+7f3530000000-7f3530bc3000 rw-p 00000000 00:00 0 
+7f3530bc3000-7f3534000000 ---p 00000000 00:00 0 
+7f3534000000-7f3534001000 r--s 00003000 08:01 3025294                    /home/neethu/Intern/Tools/android-studio/lib/reflectasm-1.07.jar
+7f3534001000-7f3534002000 r--s 00000000 08:01 3025275                    /home/neethu/Intern/Tools/android-studio/lib/jps-launcher.jar
+7f3534002000-7f3534005000 r--s 0002d000 08:01 3025289                    /home/neethu/Intern/Tools/android-studio/lib/isorelax.jar
+7f3534005000-7f3534006000 r--s 0000a000 08:01 3025323                    /home/neethu/Intern/Tools/android-studio/lib/snappy-in-java-0.3.1.jar
+7f3534006000-7f353400b000 r--s 00040000 08:01 3025273                    /home/neethu/Intern/Tools/android-studio/lib/jsch-0.1.52.jar
+7f353400b000-7f3534012000 r--s 00040000 08:01 3025306                    /home/neethu/Intern/Tools/android-studio/lib/cglib-2.2.2.jar
+7f3534012000-7f353401d000 r--s 0008d000 08:01 3025251                    /home/neethu/Intern/Tools/android-studio/lib/sanselan-0.98-snapshot.jar
+7f353401d000-7f353401f000 r--s 00007000 08:01 3025330                    /home/neethu/Intern/Tools/android-studio/lib/markdownj-core-0.4.2-SNAPSHOT.jar
+7f353401f000-7f3534020000 r--s 00000000 08:01 3025270                    /home/neethu/Intern/Tools/android-studio/lib/jcip-annotations.jar
+7f3534020000-7f3534021000 r--s 00006000 08:01 3025322                    /home/neethu/Intern/Tools/android-studio/lib/jgoodies-common-1.2.1.jar
+7f3534021000-7f3534022000 r--s 00001000 08:01 3025271                    /home/neethu/Intern/Tools/android-studio/lib/jsch.agentproxy.usocket-nc.jar
+7f3534022000-7f3534024000 r--s 0002c000 08:01 3025300                    /home/neethu/Intern/Tools/android-studio/lib/jgoodies-forms.jar
+7f3534024000-7f3534025000 r--s 0000b000 08:01 3025334                    /home/neethu/Intern/Tools/android-studio/lib/xpp3-1.1.4-min.jar
+7f3534025000-7f3534027000 r--s 00007000 08:01 3025319                    /home/neethu/Intern/Tools/android-studio/lib/objenesis-1.2.jar
+7f3534027000-7f353402c000 r--s 00068000 08:01 3025304                    /home/neethu/Intern/Tools/android-studio/lib/javac2.jar
+7f353402c000-7f353403d000 r--s 00155000 08:01 3025250                    /home/neethu/Intern/Tools/android-studio/lib/jna-platform.jar
+7f353403d000-7f35340b5000 r--s 010e3000 08:01 3673443                    /home/neethu/Intern/Tools/jdk1.8.0_71/lib/tools.jar
+7f35340b5000-7f35340b9000 r--s 000dc000 08:01 3025276                    /home/neethu/Intern/Tools/android-studio/lib/jna.jar
+7f35340b9000-7f35340c4000 r--s 00113000 08:01 3025339                    /home/neethu/Intern/Tools/android-studio/lib/trove4j.jar
+7f35340c4000-7f35340cd000 r--s 000ea000 08:01 3025290                    /home/neethu/Intern/Tools/android-studio/lib/log4j.jar
+7f35340cd000-7f35340f9000 r--s 004ff000 08:01 3025317                    /home/neethu/Intern/Tools/android-studio/lib/util.jar
+7f35340f9000-7f35341ca000 rw-p 00000000 00:00 0 
+7f35341ca000-7f35341cb000 ---p 00000000 00:00 0 
+7f35341cb000-7f353452f000 rw-p 00000000 00:00 0                          [stack:13028]
+7f353452f000-7f35346fa000 ---p 00000000 00:00 0 
+7f35346fa000-7f35349b1000 rw-p 00000000 00:00 0 
+7f35349b1000-7f3534b7c000 ---p 00000000 00:00 0 
+7f3534b7c000-7f3534b7d000 rw-p 00000000 00:00 0 
+7f3534b7d000-7f3534b7e000 ---p 00000000 00:00 0 
+7f3534b7e000-7f3534c7e000 rw-p 00000000 00:00 0                          [stack:13027]
+7f3534c7e000-7f3534c7f000 ---p 00000000 00:00 0 
+7f3534c7f000-7f3534e1f000 rw-p 00000000 00:00 0                          [stack:13026]
+7f3534e1f000-7f3535103000 ---p 00000000 00:00 0 
+7f3535103000-7f353511d000 r-xp 00000000 08:01 5243940                    /home/neethu/Intern/Tools/jdk1.8.0_71/jre/lib/amd64/libzip.so
+7f353511d000-7f353531d000 ---p 0001a000 08:01 5243940                    /home/neethu/Intern/Tools/jdk1.8.0_71/jre/lib/amd64/libzip.so
+7f353531d000-7f353531e000 rw-p 0001a000 08:01 5243940                    /home/neethu/Intern/Tools/jdk1.8.0_71/jre/lib/amd64/libzip.so
+7f353531e000-7f3535329000 r-xp 00000000 08:01 4460725                    /lib/x86_64-linux-gnu/libnss_files-2.19.so
+7f3535329000-7f3535528000 ---p 0000b000 08:01 4460725                    /lib/x86_64-linux-gnu/libnss_files-2.19.so
+7f3535528000-7f3535529000 r--p 0000a000 08:01 4460725                    /lib/x86_64-linux-gnu/libnss_files-2.19.so
+7f3535529000-7f353552a000 rw-p 0000b000 08:01 4460725                    /lib/x86_64-linux-gnu/libnss_files-2.19.so
+7f353552a000-7f3535535000 r-xp 00000000 08:01 4460735                    /lib/x86_64-linux-gnu/libnss_nis-2.19.so
+7f3535535000-7f3535734000 ---p 0000b000 08:01 4460735                    /lib/x86_64-linux-gnu/libnss_nis-2.19.so
+7f3535734000-7f3535735000 r--p 0000a000 08:01 4460735                    /lib/x86_64-linux-gnu/libnss_nis-2.19.so
+7f3535735000-7f3535736000 rw-p 0000b000 08:01 4460735                    /lib/x86_64-linux-gnu/libnss_nis-2.19.so
+7f3535736000-7f353574d000 r-xp 00000000 08:01 4460719                    /lib/x86_64-linux-gnu/libnsl-2.19.so
+7f353574d000-7f353594c000 ---p 00017000 08:01 4460719                    /lib/x86_64-linux-gnu/libnsl-2.19.so
+7f353594c000-7f353594d000 r--p 00016000 08:01 4460719                    /lib/x86_64-linux-gnu/libnsl-2.19.so
+7f353594d000-7f353594e000 rw-p 00017000 08:01 4460719                    /lib/x86_64-linux-gnu/libnsl-2.19.so
+7f353594e000-7f3535950000 rw-p 00000000 00:00 0 
+7f3535950000-7f3535959000 r-xp 00000000 08:01 4460721                    /lib/x86_64-linux-gnu/libnss_compat-2.19.so
+7f3535959000-7f3535b58000 ---p 00009000 08:01 4460721                    /lib/x86_64-linux-gnu/libnss_compat-2.19.so
+7f3535b58000-7f3535b59000 r--p 00008000 08:01 4460721                    /lib/x86_64-linux-gnu/libnss_compat-2.19.so
+7f3535b59000-7f3535b5a000 rw-p 00009000 08:01 4460721                    /lib/x86_64-linux-gnu/libnss_compat-2.19.so
+7f3535b5a000-7f3535b84000 r-xp 00000000 08:01 5243932                    /home/neethu/Intern/Tools/jdk1.8.0_71/jre/lib/amd64/libjava.so
+7f3535b84000-7f3535d84000 ---p 0002a000 08:01 5243932                    /home/neethu/Intern/Tools/jdk1.8.0_71/jre/lib/amd64/libjava.so
+7f3535d84000-7f3535d86000 rw-p 0002a000 08:01 5243932                    /home/neethu/Intern/Tools/jdk1.8.0_71/jre/lib/amd64/libjava.so
+7f3535d86000-7f3535d93000 r-xp 00000000 08:01 5243923                    /home/neethu/Intern/Tools/jdk1.8.0_71/jre/lib/amd64/libverify.so
+7f3535d93000-7f3535f93000 ---p 0000d000 08:01 5243923                    /home/neethu/Intern/Tools/jdk1.8.0_71/jre/lib/amd64/libverify.so
+7f3535f93000-7f3535f95000 rw-p 0000d000 08:01 5243923                    /home/neethu/Intern/Tools/jdk1.8.0_71/jre/lib/amd64/libverify.so
+7f3535f95000-7f3535f9c000 r-xp 00000000 08:01 4460778                    /lib/x86_64-linux-gnu/librt-2.19.so
+7f3535f9c000-7f353619b000 ---p 00007000 08:01 4460778                    /lib/x86_64-linux-gnu/librt-2.19.so
+7f353619b000-7f353619c000 r--p 00006000 08:01 4460778                    /lib/x86_64-linux-gnu/librt-2.19.so
+7f353619c000-7f353619d000 rw-p 00007000 08:01 4460778                    /lib/x86_64-linux-gnu/librt-2.19.so
+7f353619d000-7f35362a2000 r-xp 00000000 08:01 4460700                    /lib/x86_64-linux-gnu/libm-2.19.so
+7f35362a2000-7f35364a1000 ---p 00105000 08:01 4460700                    /lib/x86_64-linux-gnu/libm-2.19.so
+7f35364a1000-7f35364a2000 r--p 00104000 08:01 4460700                    /lib/x86_64-linux-gnu/libm-2.19.so
+7f35364a2000-7f35364a3000 rw-p 00105000 08:01 4460700                    /lib/x86_64-linux-gnu/libm-2.19.so
+7f35364a3000-7f3537162000 r-xp 00000000 08:01 5243938                    /home/neethu/Intern/Tools/jdk1.8.0_71/jre/lib/amd64/server/libjvm.so
+7f3537162000-7f3537361000 ---p 00cbf000 08:01 5243938                    /home/neethu/Intern/Tools/jdk1.8.0_71/jre/lib/amd64/server/libjvm.so
+7f3537361000-7f353743a000 rw-p 00cbe000 08:01 5243938                    /home/neethu/Intern/Tools/jdk1.8.0_71/jre/lib/amd64/server/libjvm.so
+7f353743a000-7f3537483000 rw-p 00000000 00:00 0 
+7f3537483000-7f353763e000 r-xp 00000000 08:01 4460650                    /lib/x86_64-linux-gnu/libc-2.19.so
+7f353763e000-7f353783d000 ---p 001bb000 08:01 4460650                    /lib/x86_64-linux-gnu/libc-2.19.so
+7f353783d000-7f3537841000 r--p 001ba000 08:01 4460650                    /lib/x86_64-linux-gnu/libc-2.19.so
+7f3537841000-7f3537843000 rw-p 001be000 08:01 4460650                    /lib/x86_64-linux-gnu/libc-2.19.so
+7f3537843000-7f3537848000 rw-p 00000000 00:00 0 
+7f3537848000-7f353784b000 r-xp 00000000 08:01 4460667                    /lib/x86_64-linux-gnu/libdl-2.19.so
+7f353784b000-7f3537a4a000 ---p 00003000 08:01 4460667                    /lib/x86_64-linux-gnu/libdl-2.19.so
+7f3537a4a000-7f3537a4b000 r--p 00002000 08:01 4460667                    /lib/x86_64-linux-gnu/libdl-2.19.so
+7f3537a4b000-7f3537a4c000 rw-p 00003000 08:01 4460667                    /lib/x86_64-linux-gnu/libdl-2.19.so
+7f3537a4c000-7f3537a61000 r-xp 00000000 08:01 3933679                    /home/neethu/Intern/Tools/jdk1.8.0_71/lib/amd64/jli/libjli.so
+7f3537a61000-7f3537c61000 ---p 00015000 08:01 3933679                    /home/neethu/Intern/Tools/jdk1.8.0_71/lib/amd64/jli/libjli.so
+7f3537c61000-7f3537c62000 rw-p 00015000 08:01 3933679                    /home/neethu/Intern/Tools/jdk1.8.0_71/lib/amd64/jli/libjli.so
+7f3537c62000-7f3537c7b000 r-xp 00000000 08:01 4460770                    /lib/x86_64-linux-gnu/libpthread-2.19.so
+7f3537c7b000-7f3537e7a000 ---p 00019000 08:01 4460770                    /lib/x86_64-linux-gnu/libpthread-2.19.so
+7f3537e7a000-7f3537e7b000 r--p 00018000 08:01 4460770                    /lib/x86_64-linux-gnu/libpthread-2.19.so
+7f3537e7b000-7f3537e7c000 rw-p 00019000 08:01 4460770                    /lib/x86_64-linux-gnu/libpthread-2.19.so
+7f3537e7c000-7f3537e80000 rw-p 00000000 00:00 0 
+7f3537e80000-7f3537ea3000 r-xp 00000000 08:01 4460626                    /lib/x86_64-linux-gnu/ld-2.19.so
+7f3537ea3000-7f3537ea6000 r--s 0004d000 08:01 3025255                    /home/neethu/Intern/Tools/android-studio/lib/jdom.jar
+7f3537ea6000-7f3537f84000 rw-p 00000000 00:00 0 
+7f3537f84000-7f3537f87000 ---p 00000000 00:00 0 
+7f3537f87000-7f3538089000 rw-p 00000000 00:00 0                          [stack:13025]
+7f3538089000-7f353808b000 r--s 00001000 08:01 3025312                    /home/neethu/Intern/Tools/android-studio/lib/slf4j-log4j12-1.7.10.jar
+7f353808b000-7f353808f000 r--s 00097000 08:01 4198859                    /home/neethu/Intern/Tools/jdk1.8.0_71/jre/lib/jsse.jar
+7f353808f000-7f3538092000 r--s 00022000 08:01 3025263                    /home/neethu/Intern/Tools/android-studio/lib/extensions.jar
+7f3538092000-7f3538094000 r--s 0000c000 08:01 3025292                    /home/neethu/Intern/Tools/android-studio/lib/bootstrap.jar
+7f3538094000-7f3538096000 r--s 00002000 08:01 3025299                    /home/neethu/Intern/Tools/android-studio/lib/boot.jar
+7f3538096000-7f353809e000 rw-s 00000000 08:01 7864341                    /tmp/hsperfdata_neethu/13023
+7f353809e000-7f353809f000 rw-p 00000000 00:00 0 
+7f353809f000-7f35380a0000 r--p 00000000 00:00 0 
+7f35380a0000-7f35380a2000 rw-p 00000000 00:00 0 
+7f35380a2000-7f35380a3000 r--p 00022000 08:01 4460626                    /lib/x86_64-linux-gnu/ld-2.19.so
+7f35380a3000-7f35380a4000 rw-p 00023000 08:01 4460626                    /lib/x86_64-linux-gnu/ld-2.19.so
+7f35380a4000-7f35380a5000 rw-p 00000000 00:00 0 
+7ffdfa832000-7ffdfa853000 rw-p 00000000 00:00 0                          [stack]
+7ffdfa98c000-7ffdfa98e000 r--p 00000000 00:00 0                          [vvar]
+7ffdfa98e000-7ffdfa990000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+VM Arguments:
+jvm_args: -Xbootclasspath/a:/home/neethu/Intern/Tools/android-studio/bin/../lib/boot.jar -Xms256m -Xmx1280m -XX:MaxPermSize=350m -XX:ReservedCodeCacheSize=225m -XX:+UseConcMarkSweepGC -XX:SoftRefLRUPolicyMSPerMB=50 -da -Djna.nosys=true -Djna.boot.library.path= -Djna.debug_load=true -Djna.debug_load.jna=true -Dsun.io.useCanonCaches=false -Djava.net.preferIPv4Stack=true -Dawt.useSystemAAFontSettings=lcd -Djb.vmOptionsFile=/home/neethu/Intern/Tools/android-studio/bin/studio64.vmoptions -XX:ErrorFile=/home/neethu/java_error_in_STUDIO_.log -Djb.restart.code=88 -Didea.paths.selector=AndroidStudio1.5 -Didea.platform.prefix=AndroidStudio 
+java_command: com.intellij.idea.Main
+java_class_path (initial): /home/neethu/Intern/Tools/android-studio/bin/../lib/bootstrap.jar:/home/neethu/Intern/Tools/android-studio/bin/../lib/extensions.jar:/home/neethu/Intern/Tools/android-studio/bin/../lib/util.jar:/home/neethu/Intern/Tools/android-studio/bin/../lib/jdom.jar:/home/neethu/Intern/Tools/android-studio/bin/../lib/log4j.jar:/home/neethu/Intern/Tools/android-studio/bin/../lib/trove4j.jar:/home/neethu/Intern/Tools/android-studio/bin/../lib/jna.jar:/home/neethu/Intern/Tools/jdk1.8.0_71/lib/tools.jar
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
+SHELL=/bin/bash
+DISPLAY=:0
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0xabafa0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGBUS: [libjvm.so+0xabafa0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGFPE: [libjvm.so+0x9183c0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGPIPE: SIG_IGN, sa_mask[0]=00000000000010000000000000000000, sa_flags=SA_RESTART
+SIGXFSZ: [libjvm.so+0x9183c0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGILL: [libjvm.so+0x9183c0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGUSR1: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGUSR2: [libjvm.so+0x9199f0], sa_mask[0]=00000000000000000000000000000000, sa_flags=SA_RESTART|SA_SIGINFO
+SIGHUP: [libjvm.so+0x91adf0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGINT: [libjvm.so+0x91adf0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGTERM: [libjvm.so+0x91adf0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGQUIT: [libjvm.so+0x91adf0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+
+
+---------------  S Y S T E M  ---------------
+
+OS:DISTRIB_ID=Ubuntu
+DISTRIB_RELEASE=14.04
+DISTRIB_CODENAME=trusty
+DISTRIB_DESCRIPTION="Ubuntu 14.04.3 LTS"
+
+uname:Linux 3.19.0-43-generic #49~14.04.1-Ubuntu SMP Thu Dec 31 15:44:49 UTC 2015 x86_64
+libc:glibc 2.19 NPTL 2.19 
+rlimit: STACK 8192k, CORE 0k, NPROC 15688, NOFILE 4096, AS infinity
+load average:2.96 1.65 1.36
+
+/proc/meminfo:
+MemTotal:        4037600 kB
+MemFree:         1277164 kB
+MemAvailable:    2173688 kB
+Buffers:           77420 kB
+Cached:          1153616 kB
+SwapCached:         5400 kB
+Active:          2060832 kB
+Inactive:         526740 kB
+Active(anon):    1266960 kB
+Inactive(anon):   307540 kB
+Active(file):     793872 kB
+Inactive(file):   219200 kB
+Unevictable:          32 kB
+Mlocked:              32 kB
+SwapTotal:       4183036 kB
+SwapFree:        4171356 kB
+Dirty:              8068 kB
+Writeback:             0 kB
+AnonPages:       1336148 kB
+Mapped:           177208 kB
+Shmem:            217976 kB
+Slab:             128544 kB
+SReclaimable:     104776 kB
+SUnreclaim:        23768 kB
+KernelStack:        3600 kB
+PageTables:        11000 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     6201836 kB
+Committed_AS:    2780396 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:      349108 kB
+VmallocChunk:   34359378008 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:    858112 kB
+CmaTotal:              0 kB
+CmaFree:               0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+DirectMap4k:      117312 kB
+DirectMap2M:     4067328 kB
+
+
+CPU:total 2 (2 cores per cpu, 1 threads per core) family 6 model 23 stepping 10, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, tsc
+
+/proc/cpuinfo:
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 23
+model name	: Pentium(R) Dual-Core  CPU      E5500  @ 2.80GHz
+stepping	: 10
+microcode	: 0xa07
+cpu MHz		: 2800.000
+cache size	: 2048 KB
+physical id	: 0
+siblings	: 2
+core id		: 0
+cpu cores	: 2
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx lm constant_tsc arch_perfmon pebs bts rep_good nopl aperfmperf pni dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm xsave lahf_lm dtherm tpr_shadow vnmi flexpriority
+bugs		:
+bogomips	: 5646.60
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 1
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 23
+model name	: Pentium(R) Dual-Core  CPU      E5500  @ 2.80GHz
+stepping	: 10
+microcode	: 0xa07
+cpu MHz		: 2800.000
+cache size	: 2048 KB
+physical id	: 0
+siblings	: 2
+core id		: 1
+cpu cores	: 2
+apicid		: 1
+initial apicid	: 1
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx lm constant_tsc arch_perfmon pebs bts rep_good nopl aperfmperf pni dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm xsave lahf_lm dtherm tpr_shadow vnmi flexpriority
+bugs		:
+bogomips	: 5646.60
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+
+
+Memory: 4k page, physical 4037600k(1282832k free), swap 4183036k(4171356k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (25.71-b15) for linux-amd64 JRE (1.8.0_71-b15), built on Dec 22 2015 18:21:33 by "java_re" with gcc 4.3.0 20080428 (Red Hat 4.3.0-8)
+
+time: Wed Feb  3 14:55:35 2016
+elapsed time: 63 seconds (0d 0h 1m 3s)
+

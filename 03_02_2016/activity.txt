@@ -1,0 +1,3 @@
+Worked out an example of storing the data into a database and retrieve it from database
+Familiarised with Custom cursor adapter
+
