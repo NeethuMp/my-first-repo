@@ -1,0 +1,4 @@
+Worked out with custom cursor Adapter in sqlite
+worked out the how to convert currenttimeinmilliseconds to date
+Familiarised with Intent filters
+
