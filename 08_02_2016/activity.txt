@@ -1,0 +1,2 @@
+Worked outan example of how to find the battery status and network type of a phone
+ 
