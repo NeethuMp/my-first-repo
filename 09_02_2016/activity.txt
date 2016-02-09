@@ -1,0 +1,4 @@
+Worked out an example of PhoneStatus using intent filters
+Familiarised with Abstract Method and Abstract class
+Familiarised with the fragments
+
