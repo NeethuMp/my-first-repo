@@ -1,0 +1,5 @@
+Familiarised with Theme in android
+Worked out an example of the Theme in android
+Familiarised with coordinator layout
+Worked out an example of Coordinator layout
+
