@@ -1,0 +1,3 @@
+Familiarised with navigation drawer activity.
+Worked out an example Using Navigation Drawer Activity.
+Familiarised with FragmentManager.
