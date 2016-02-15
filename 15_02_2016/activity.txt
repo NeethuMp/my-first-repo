@@ -1,0 +1,2 @@
+Familiarised with OpenWeatherData.
+Worked out an example of OpenWeather data using retrofit API.
