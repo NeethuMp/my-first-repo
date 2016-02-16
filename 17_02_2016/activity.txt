@@ -1,0 +1,1 @@
+Familiarised with how to access weather data using retrofit API.
