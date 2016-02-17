@@ -1,1 +1,3 @@
-Familiarised with how to access weather data using retrofit API.
+WORKED OUT AN EXAMPLE OF HOW TO FETCH WEATHER DATA USING RETROFIT IN ANDROID
+fAMILIARISED WITH TABLE LAYOUT
+
