@@ -1,0 +1,4 @@
+Worked out an example using table layout
+worked out with glide
+Worked out with how to fetch data using the openweathermap api
+
