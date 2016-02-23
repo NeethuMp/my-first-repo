@@ -1,0 +1,4 @@
+Familiarised with accessing Google Ma using Intent.
+Familiarised with card layout.
+Familiarised with Git branch
+
