@@ -1,0 +1,3 @@
+Familiarised with branch in Git
+Familiarised with gitg
+Familiarised with git checkout
