@@ -1,0 +1,3 @@
+Familiarised with Google Cloud Messaging.
+Worked out an example of GCM
+
