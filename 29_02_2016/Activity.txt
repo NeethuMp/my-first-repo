@@ -1,0 +1,2 @@
+Familiarised with GCM
+Worked out an example of Push notification using GCM
