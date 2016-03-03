@@ -1,0 +1,3 @@
+Familiarised with animation in android
+Worked out an example of Translation,Rotation,Scaling
+
