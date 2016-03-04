@@ -1,0 +1,3 @@
+Familiarised with frame animation 
+Worked out an example of frame animation
+
