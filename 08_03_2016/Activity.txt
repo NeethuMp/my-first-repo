@@ -1,0 +1,2 @@
+Familiarised with Frame animation
+Familiarised with interpolator
