@@ -1,0 +1,3 @@
+Familiarised with GCM Network Manager.
+Worked out an example of GCM Network Manager.
+Familiarised with custom interpolator in animation 
