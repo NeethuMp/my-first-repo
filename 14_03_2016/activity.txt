@@ -1,0 +1,2 @@
+Familiarised with gcm network manager periodic task.
+Worked out an example of periodic task.
