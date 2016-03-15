@@ -1,0 +1,3 @@
+Worked out an example of  how to start a service when connection type is 3G.
+Familiarised with how to start a service when connection type is 3G  using gcm network manager.
+ 
